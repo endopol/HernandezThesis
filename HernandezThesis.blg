@@ -71,7 +71,6 @@ Repeated entry---line 90 of file SolidObjects/cvpr2015_solobj/bib/ayvaciS11mdl.b
 I'm skipping whatever remains of this entry
 Database file #11: SolidObjects/cvpr2015_solobj/bib/trevor.bib.bib
 Database file #12: MinRep/minrep.bib.bib
-Warning--I didn't find a database entry for "roumeliotisM"
 Too many commas in name 1 of "G.A.\ Hollinger, B.\ Englot, F.\ Hover, U.\ Mitra and G.S.\ Sukhatme" for entry hollinger12
 while executing---line 1049 of file plain.bst
 Warning--empty journal in algoet94
@@ -103,45 +102,45 @@ Warning--empty booktitle in yamauchi97
 Warning--empty booktitle in yuG00
 Warning--empty booktitle in yuWY96
 Warning--there's a number but no volume in GuofengZhang:jmb
-You've used 102 entries,
+You've used 103 entries,
             2118 wiz_defined-function locations,
-            1403 strings with 30061 characters,
-and the built_in function-call counts, 39434 in all, are:
-= -- 3941
-> -- 1762
-< -- 47
-+ -- 705
-- -- 585
-* -- 2497
-:= -- 6143
-add.period$ -- 347
-call.type$ -- 102
-change.case$ -- 594
+            1406 strings with 30291 characters,
+and the built_in function-call counts, 39979 in all, are:
+= -- 4001
+> -- 1780
+< -- 49
++ -- 712
+- -- 591
+* -- 2532
+:= -- 6217
+add.period$ -- 351
+call.type$ -- 103
+change.case$ -- 600
 chr.to.int$ -- 0
-cite$ -- 129
-duplicate$ -- 1698
-empty$ -- 3123
-format.name$ -- 585
-if$ -- 8625
+cite$ -- 130
+duplicate$ -- 1723
+empty$ -- 3167
+format.name$ -- 591
+if$ -- 8753
 int.to.chr$ -- 0
-int.to.str$ -- 102
-missing$ -- 102
-newline$ -- 530
-num.names$ -- 208
-pop$ -- 754
+int.to.str$ -- 103
+missing$ -- 103
+newline$ -- 535
+num.names$ -- 210
+pop$ -- 762
 preamble$ -- 1
-purify$ -- 492
+purify$ -- 497
 quote$ -- 0
-skip$ -- 1319
+skip$ -- 1341
 stack$ -- 0
-substring$ -- 2414
-swap$ -- 560
-text.length$ -- 47
+substring$ -- 2459
+swap$ -- 574
+text.length$ -- 49
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 406
+type$ -- 410
 warning$ -- 27
-while$ -- 356
-width$ -- 105
-write$ -- 1128
+while$ -- 361
+width$ -- 106
+write$ -- 1141
 (There were 16 error messages)

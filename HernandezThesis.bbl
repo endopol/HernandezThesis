@@ -431,6 +431,12 @@ Pradeep~Khosla Robert~Grabowski and Howie Choset.
 \newblock Autonomous exploration via regions of interest.
 \newblock 2003.
 
+\bibitem{roumeliotis2002augmenting}
+Stergios~I Roumeliotis, Andrew~E Johnson, and James~F Montgomery.
+\newblock Augmenting inertial navigation with image-based motion estimation.
+\newblock In {\em Robotics and Automation, 2002. Proceedings. ICRA'02. IEEE
+  International Conference on}, volume~4, pages 4326--4333. IEEE, 2002.
+
 \bibitem{Russell06}
 Bryan~C Russell, William~T Freeman, Alexei~A Efros, Josef Sivic, and Andrew
   Zisserman.

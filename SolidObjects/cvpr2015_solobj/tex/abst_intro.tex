@@ -35,6 +35,12 @@ a method to endow a scene, densely reconstructed from monocular video, with a me
 Occlusions inform the granularity of the segmentation. OF all possible scene segmentations, those that do not trigger occlusions in response to viewer motion are neglected.
 Occlusions inform the level of granularity of teh segmentation of the scene. However, segmenting the images and back-projecting the result onto tye scene does not yield temporally consistent (viewpoint-independent) results, thus we develop ….
 \fi
+\begin{figure}
+\centering
+\includegraphics[width=4.5in]{figs/pipeline.pdf}
+\caption{Our monocular dense reconstruction and segmentation pipeline}\label{fig:pipeline}
+\end{figure}
+
 
 In this chapter, we present a method, illustrated in Fig. \ref{fig:pipeline}, to endow a scene, densely reconstructed from monocular video, 
 with a metric that incorporates geometric homogeneity and image topology through occlusions. While the latter are temporally inconsistent (they change with the

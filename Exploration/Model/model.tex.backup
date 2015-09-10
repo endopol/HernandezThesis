@@ -81,7 +81,7 @@ function $\Y(x) = h(x, \Omega, \O)$ of the scene $(\Omega, \O)$ and the vantage 
 %a measurement $\Y$ was taken at the point $x$).
 If we interpret
 this as a realization of a stochastic process, each measurement
-$\Y_i$ reduces the uncertainty in $\O$. Although each
+$\Y_i$, on average, reduces the uncertainty in $\O$. Although each
 range sensor is affected by uncertainty due to scaling,
 spatial quantization, noise, etc. most of the uncertainty
 is due to occlusions, for objects are opaque and therefore 
@@ -99,11 +99,11 @@ velocity, so that $x_{i+1} = x_i + u_i$.
 %A range map $y$ at $x$ defines a star-shaped region:
 %$R_x(y) := \{x\1\in \Omega: d(x,x\1) < y(\theta(x,x\1))\}$,
 %where $\theta(x,x\1)\in\SS$ is the direction from point $x$ to point $x\1$.
-In order to compute the “information gain” of a measurement at time $t$, we have
-to define suitable distributions on the objects of 
-interest. 
-We maintain an estimate of the explorer's state at time $t$
-as a distribution $\PP_t[\,\cdot\,] = \PP[\,\cdot\,|\Y^t\bigr]$ on possible realizations of $\A$.
+%In order to compute the “information gain” of a measurement at time $t$, we have
+%to define suitable distributions on the objects of 
+%interest. 
+%We maintain an estimate of the explorer's state at time $t$
+%as a distribution $\PP_t[\,\cdot\,] = \PP[\,\cdot\,|\Y^t\bigr]$ on possible realizations of $\A$.
 
 \section{Next-View Entropy}
 
@@ -182,7 +182,7 @@ Now we compute extinction probability, using a posterior estimate of the scene
 \begin{align*}
 \PP_t\bigl[\Y_G(x)_{ij}=1 \;|\; \Y_G(x)_{i-1,j}=1\big] 
 &= \exp\Biggl(\underset{\!\!\!\mathrlap{\text{line}(x+g_{i-1,j},\,x+g_{ij})}}{\int}\; 
-\frac{\log\bigl(\PP_t(x+g_{ij}\in\A)\bigr)}{\operatorname{MFP(y)}}|dy|\Biggr)\\
+\frac{\log\bigl(\PP_t(y\in\A)\bigr)}{\operatorname{MFP}(y)}|dy|\Biggr)\\
 &\approx \PP_t(x+g_{ij}\in\A)^{s/\operatorname{MFP}(x+g_{ij})},
 \end{align*}
 Induction on this chain of conditional probabilities gives
@@ -325,10 +325,10 @@ so
 &= -p_cw_i\log w_i + (1-p_c)w_i\log\frac{1-p_c}{1-p_cw_i}\\
 &\qquad - (1-w_i)\log(1-p_cw_i).
 \end{align*}
-
+Putting this together,
 \begin{align}
- E_t(x) \approx \sum_{ij}\bigl(\HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots] + \II[\Y_G(x)_{o_k};\,\P\,|\,\ldots]\bigr)\notag\\
- \cdot\,\prod_{i\1<i}\PP_t[x+g_{i\1j}\in\A]^{s/\operatorname{MFP}(x+g_{i\1j})}
+ E_t(x) &\approx \sum_{ij}\bigl(\HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots] + \II[\Y_G(x)_{o_k};\,\P\,|\,\ldots]\bigr)\notag\\
+ &\qquad\cdot\,\prod_{i\1<i}\PP_t[x+g_{i\1j}\in\A]^{s/\operatorname{MFP}(x+g_{i\1j})}
 \label{eq: cell value}
 \end{align}
 

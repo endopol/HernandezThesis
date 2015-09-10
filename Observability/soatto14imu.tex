@@ -537,26 +537,6 @@ n^1(t) \\ n^2(t) \\ \vdots \\ n^N(t) \ea
 \label{eq-vis}
 \end{equation}
 
-
-\subsection{Range augmentation (radar)}
-
-If measurements of range of sparse reflectors in position $X^i \in \real^3$ are given, we consider the projection function (with an abuse of notation) $\pi: \real^3 \rightarrow {\mathbb S}^2; \ X \mapsto \| X \|$, and assume that, for each point $i$ -- through pre-processing of the radar phase histories, we can measure
-\begin{equation}
-\boxed{Z^i(t) = \| X^i - T(t) \| + n^i(t) ~  \doteq \pi(g^{-1}(t)X^i) + n^i(t) ~~~ t \ge 0.}
-\end{equation}
-This equation is formally similar to (\ref{eq-y}), so the general form (\ref{eq-fg}) does not change if we consider range only measurements, and even a mixture of {\em both} range and bearing. 
-
-In the case of bearing measurements, the inverse projection depends on two parameters (the unknown bearing). If we call 
-\begin{equation}
-\hat y \doteq \frac{X}{\| X \|} \in {\mathbb S}^2
-\end{equation}
-then we have that, noting that $Z^i(0) = \| X^i \| + n^i(0)$, 
-\begin{equation}
-X^i = {\hat y}^i Z^i + {\hat n}^i
-\label{eq-ran-tri}
-\end{equation}
-where ${\hat n}^i \doteq - {\hat y}^i n^i(0)$. Although the measurement equations for the bearing-only and range-only filters are formally identical, the observability properties and Gauge ambiguities are different. 
-
 \subsection{Alignment (calibration)} 
 
 Consider the model (\ref{eq-mech}) with measurements $y^i(t)$ can representing either the range of a number of sparse reflectors or the position on the image plane of a sparse collection of point features. In the former case, the range is measured in the reference frame of the radar, and therefore we have 
@@ -1366,8 +1346,8 @@ After the Gauge Transformation has ben fixed, the model is observable, and there
 \tilde R_{t_i} &=&  e^{\w_B}e^{\widehat \gamma \theta} \bar R_{i} e^{\w_A}\\
 \tilde T_{cb} &=&  T_{cb} + \tilde \sigma T_{cb} + R_{cb}T_A(1+ \tilde \sigma) \\
 \tilde R_{cb} &=&  R_{cb}\exp(\w_A)\\
-\tilde \alpha_b &=&  (\ref{eq-alphatilde}) \nonumber  \\
-\tilde \w_b &=& (\ref{eq-omtilde}) \nonumber \\
+%\tilde \alpha_b &=&  (\ref{eq-alphatilde}) \nonumber  \\
+%\tilde \w_b &=& (\ref{eq-omtilde}) \nonumber \\
 {\mathrm where} & &  \nonumber \\
 \| T_A \| &\le& \frac{2 k \min_t \| \dot \w_b \| }{\max_t \| \ddot \w\imu  \|}  \nonumber \\
 \| \w_A \| &\le& \frac{2 \min_t \| \dot \w_b \|}{\max_t \| \dot \w\imu  \|} \nonumber  \\
@@ -1378,5 +1358,5 @@ After the Gauge Transformation has ben fixed, the model is observable, and there
 and arbitrary $\theta$, $T_B$ and suitable constant $\kappa$. The groups will be defined up to an arbitrary reference frame $(\bar R_i, \bar T_i)$, except for the reference group where that transformation is fixed. 
 Note that, as the reference group ``switches'' (when points in the reference group become occluded or otherwise disappear due to failure in the data association mechanism), a small error in pose is accumulated. 
 This error affects the gauge transformation, not the {\em state} of the system, and therefore is not reflected in the innovation, nor in the covariance of the state estimate, that remains bounded. 
-This is unlike \cite{roumeliotisM}, where the covariance of the translation state $T_B$ and the rotation about gravity $\theta$ grows unbounded over time, possibly affecting the numerical aspects of the implementation. 
+This is unlike \cite{roumeliotis2002augmenting}, where the covariance of the translation state $T_B$ and the rotation about gravity $\theta$ grows unbounded over time, possibly affecting the numerical aspects of the implementation. 
 Notice that in the limit where $\dot \w_b = \dot \alpha_b =0$, we obtain back Eq. (\ref{eq-obs-zeroinput}).

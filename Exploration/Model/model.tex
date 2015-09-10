@@ -273,23 +273,24 @@ For an \emph{unknown} partition $\P$, %the expected information gain of sampling
 \HH[\Y(S)] = \HH[\Y(S)\,|\,\P]  + \II[\P;\Y(S)]
 \end{align}
 So we can express the view value as
-\begin{align*}
+\begin{align}
 &\HH\bigl[\Y_G(x)_{o_k=(i,j)}\;|\;
 \{\Y_G(x)_{o_{\ell}}\;|\;\ell<k\},\;
 \Y_G(x)_{i\1j}=1\;\text{for all $\;i\1<i$}
-\bigr]\\
-&\qquad = \HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots] + \II[\P;\,\Y_G(x)_{o_k}\,|\,\ldots],
-\end{align*}
+\bigr]\notag\\
+&\qquad = \HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots] + \II[\Y_G(x)_{o_k};\,\P\,|\,\ldots], \label{eq: entropy split}
+\end{align}
 where ``$\ldots$'' abbreviates the condititioning expression on the LHS.
+\iffalse
 To simplify this computation, we assume that
-$$\II[\P;\,\Y_G(x)_{o_k}\,|\,\{\Y_G(x)_{o_{\ell}}\;|\;\ell<k\},\;
-\Y_G(x)_{i\1j}=1\;\text{for all $\;i\1<i$}],$$
-i.e., the additional information regarding the partition $\P$
-that can be learned from revealing a sample at $x+g_{ij}$,
-after revealing all the samples that precede it,
-is negligible, or at least constant as $i$ and $j$ vary.
-
-Thus, we compute view value at $g_{ij}$ as an average, over many known partitions  $\P$,
+%$$\HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots] \gg \II[\P;\,\Y_G(x)_{o_k}\,|\,\ldots]$$
+$$\II[\P;\,\Y_G(x)_{o_k=(i,j)}\,|\,\{\Y_G(x)_{o_{\ell}}\;|\;\ell<k\},\;
+\Y_G(x)_{i\1j}=1\;\text{for all $\;i\1<i$}]=K_G,$$
+i.e., the additional information regarding a sample at $x+g_{ij}$
+that is given by revealing the partition,
+is constant as $i$ and $j$ vary.  
+\fi
+The first term on the RHS of \ref{eq: entropy split} is an average, over many known partitions  $\P$,
 of the coloring information gained by sampling at $x+g_{ij}$.
 If no preceding nodes have sampled from the same cell, the gain is
 $-p_c\log p_c - (1-p_c)\log p_c$.  Otherwise gain is zero.
@@ -299,14 +300,37 @@ sample point will be the ``first to find'' the cell that it lies in.
 If $\P$ is selected from a translationally- and rotationally-invariant probability distribution,
 this is equal to the expectation of the reciprocal of the number of grid points sharing a cell with $x+g_{ij}$.  
 This expectation depends only on the position of $g_{ij}$ in the grid, and is radially symmetric, so we can write
+\begin{equation}\HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots]=
+w_i(-p_c\log p_c - (1-p_c)\log p_c),\end{equation}                                   
+where
+$$w_i:=\EE\left[\frac{1}{\#(G\cap\P(x+g_{i,1}))}\right].$$
+
+The second term on the RHS of \ref{eq: entropy split} can be computed directly:
+\begin{align*} 
+\II[\Y_G(x)_{o_k};\,\P|\,\ldots]&=\sum_{\P}\sum_{\Y_G(x)_{o_k}} 
+\PP[\P,\, \Y_G(x)_{o_k}\,|\,\ldots] \log\frac{\PP[\P,\, \Y_G(x)_{o_k}\,|\,\ldots]}
+{\PP[\P\,|\,\ldots]\,\PP[\Y_G(x)_{o_k}\,|\,\ldots]}
+\end{align*}
+Let $A$ be the event that $x+g_{o_k}$ is the first in its cell,
+let $B_0$ and $B_1$ be the event that $\Y_G(x)_{o_k}$ equals 0 or 1, respectively.
+Then
+\begin{gather*}
+\PP[A\,|\,\ldots] = w_i,\\
+\PP[B_0\,|\,\ldots] = \PP[A,\,B_0\,|\,\ldots] = p_cw_i,\\
+\PP[A^c,\,B_1\,|\,\ldots] = \PP[A^c\,|\,\ldots] = 1-w_i,
+\end{gather*}
+so
+\begin{align*}
+ \II[\Y_G(x)_{o_k};\,\P\,|\,\ldots] 
+&= -p_cw_i\log w_i + (1-p_c)w_i\log\frac{1-p_c}{1-p_cw_i}\\
+&\qquad - (1-w_i)\log(1-p_cw_i).
+\end{align*}
+Putting this together,
 \begin{align}
- E_t(x) \approx \prod_{i\1<i} w_i H(\PP_t[x+g_{i\1j}])\cdot\PP_t[x+g_{i\1j}\in\A]^{s/\operatorname{MFP}(x+g_{i\1j})}
+ E_t(x) &\approx \sum_{ij}\bigl(\HH[\Y_G(x)_{o_k}\,|\,\P,\,\ldots] + \II[\Y_G(x)_{o_k};\,\P\,|\,\ldots]\bigr)\notag\\
+ &\qquad\cdot\,\prod_{i\1<i}\PP_t[x+g_{i\1j}\in\A]^{s/\operatorname{MFP}(x+g_{i\1j})}
 \label{eq: cell value}
 \end{align}
-where $H(p):=-p\log p - (1-p)\log(1-p)$ and
-\begin{equation}
-w_i = \EE\left[\frac{1}{\#(G\cap\P^r(g_{i,1}))}\right].
-\end{equation}
 
 \begin{figure*}[ht]
  \centering
@@ -641,15 +665,15 @@ in the measurements it produces.
 \begin{figure}
 \centering
 \begin{tabular}{cccc}
-\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{Parallel_Bits/iso-01}&
-\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{Parallel_Bits/iso-02}&
-\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{Parallel_Bits/iso-03}&
-\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{Parallel_Bits/iso-04}\\
+\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{../Speedup/Parallel_Bits/iso-01}&
+\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{../Speedup/Parallel_Bits/iso-02}&
+\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{../Speedup/Parallel_Bits/iso-03}&
+\includegraphics[height=.75in, trim={.7cm 0 .7cm 0},clip]{../Speedup/Parallel_Bits/iso-04}\\
 %\includegraphics[height=.5in]{Parallel_Bits/par000}
-\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{Parallel_Bits/par025}&
-\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{Parallel_Bits/par100}&
-\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{Parallel_Bits/par225}&
-\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{Parallel_Bits/par400}
+\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{../Speedup/Parallel_Bits/par025}&
+\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{../Speedup/Parallel_Bits/par100}&
+\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{../Speedup/Parallel_Bits/par225}&
+\includegraphics[height=.75in, trim={.7cm .6cm .7cm .6cm}, clip]{../Speedup/Parallel_Bits/par400}
 \end{tabular}
 \caption{\emph{Bit-Parallel Computation of Ising Marginal}
 ``Bit twiddling'' allows us to compute 64 simultaneous realizations of the Ising process
@@ -710,9 +734,9 @@ E(\bI^{t+1}_{ij}) =
 \end{equation}
 
 \begin{figure}
-\includegraphics[width=1.5in]{Parallel_Bits/isingup}\quad
-\includegraphics[width=1.5in]{Parallel_Bits/bitup}\quad
-\includegraphics[width=1.5in]{Parallel_Bits/parcompare}
+\includegraphics[width=1.5in]{../Speedup/Parallel_Bits/isingup}\quad
+\includegraphics[width=1.5in]{../Speedup/Parallel_Bits/bitup}\quad
+\includegraphics[width=1.5in]{../Speedup/Parallel_Bits/parcompare}
 \caption{\emph{Comparison of Update Probabilities:} 
 Values of $\bar\beta$ are taken from 0 to 6.  
 Update probabilities for the Ising Model and
@@ -853,18 +877,15 @@ has been determined with high confidence (b), that site loses its informative va
 
 \subsection{Performance Bounds}
 
-These bounds depend on some conjectured properties of the Ising-model marginal visibility probabilities $p_t(x) = \PP_t[x\in\V]$.  
-Assume a fixed scaled-iteration-number $\mu := m/\text{scale(m)}$, and sufficiently-small grid spacings in $G$:
+These bounds depend on some assumed properties of the Ising-model marginal visibility probabilities $p_t(x) = \PP_t[x\in\V]$.  
 
-\begin{conj}[Bounded Curvature of $p_t$]
-\label{equi}
-For any threshold $\epsilon>0$, 
-there is a finite constant $K = K(\epsilon)$, independent of $\V_t$ and $\O_t$, such that
-(some suitable discrete analogue of) the boundary curvature of the level set $\{x:p_t(x) \leq 1-\epsilon\}$ is bounded above by $K$.
-\end{conj}
 The result in \cite{lacoin2011zero}, that the zero-temperature Ising model acts (in the scaling limit) as a curve-shortening flow on the level curves of binary images,
 suggests that the iterative low-temperature simulations that generate our hypothetical scenes
 will produce predictably-rounded hypothetical obstacles.  In turn, it suggests that their pointwise average will have predictably-rounded level curves.
+Here we will assume that, for any threshold $\epsilon>0$, 
+there is a finite constant $K = K(\epsilon)$, independent of $\V_t$ and $\O_t$, such that
+%(some suitable discrete analogue of) 
+the boundary curvature of the level set $\{x:p_t(x) \leq 1-\epsilon\}$ is bounded above by $K$.
 
 \bigskip
 Now, let $\V_t^r$ be the set of points in $\V_t$ that lie at distance $r$ or greater from points in $\O_t$, and let $\V_t^r(x_0)$ be the path-component of $\V_t^r$ containing $x_0$.  Next, we make a sort of equicontinuity assumption:

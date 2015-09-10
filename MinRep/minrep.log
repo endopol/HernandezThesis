@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  27 OCT 2014 10:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.15)  10 SEP 2015 06:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **minrep.tex
 (./minrep.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texmf/tex/latex/beamer/base/beamer.cls
 (/usr/share/texmf/tex/latex/beamer/base/beamerbasercs.sty
 Package: beamerbasercs 2012/11/13 (rcs-revision cb16a617839f)
@@ -908,12 +908,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 153.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<cdiag3.pdf, id=64, 306.14375pt x 253.94875pt>
+<cdiag3.pdf, id=64, 179.61552pt x 210.68073pt>
 File: cdiag3.pdf Graphic file (type pdf)
  <use cdiag3.pdf>
 Package pdftex.def Info: cdiag3.pdf used on input line 153.
-(pdftex.def)             Requested size: 108.405pt x 141.10269pt.
- [2
+(pdftex.def)             Requested size: 108.405pt x 214.39156pt.
+
+Overfull \vbox (63.56676pt too high) detected at line 153
+ []
+
+[2
 
  <./cdiag1.pdf>] <cdiag2.pdf, id=97, 218.8175pt x 248.93pt>
 File: cdiag2.pdf Graphic file (type pdf)
@@ -924,8 +928,12 @@ File: cdiag3.pdf Graphic file (type pdf)
 
 <use cdiag3.pdf>
 Package pdftex.def Info: cdiag3.pdf used on input line 165.
-(pdftex.def)             Requested size: 108.405pt x 141.10269pt.
- [3
+(pdftex.def)             Requested size: 108.405pt x 214.39156pt.
+
+Overfull \vbox (63.56676pt too high) detected at line 165
+ []
+
+[3
 
  <./cdiag2.pdf>]
 File: cdiag2.pdf Graphic file (type pdf)
@@ -935,16 +943,20 @@ Package pdftex.def Info: cdiag2.pdf used on input line 177.
 File: cdiag3.pdf Graphic file (type pdf)
  <use cdiag3.pdf>
 Package pdftex.def Info: cdiag3.pdf used on input line 177.
-(pdftex.def)             Requested size: 108.405pt x 141.10269pt.
- [4
+(pdftex.def)             Requested size: 108.405pt x 214.39156pt.
 
- <./cdiag3.pdf>] <random_alg-1.pdf, id=161, 480.79625pt x 474.77374pt>
+Overfull \vbox (58.56676pt too high) detected at line 177
+ []
+
+[4
+
+ <./cdiag3.pdf>] <random_alg-1.pdf, id=164, 480.79625pt x 474.77374pt>
 File: random_alg-1.pdf Graphic file (type pdf)
 
 <use random_alg-1.pdf>
 Package pdftex.def Info: random_alg-1.pdf used on input line 187.
 (pdftex.def)             Requested size: 146.37486pt x 144.54pt.
- <random_adj.pdf, id=162, 291.0875pt x 288.07625pt>
+ <random_adj.pdf, id=165, 291.0875pt x 288.07625pt>
 File: random_adj.pdf Graphic file (type pdf)
 
 <use random_adj.pdf>
@@ -953,13 +965,13 @@ Package pdftex.def Info: random_adj.pdf used on input line 187.
  [5
 
  <./random_alg-1.pdf> <./random_adj.pdf>]
-<random_cliques.pdf, id=200, 834.04187pt x 722.7pt>
+<random_cliques.pdf, id=203, 834.04187pt x 722.7pt>
 File: random_cliques.pdf Graphic file (type pdf)
  <use random_cliques.pdf>
 Package pdftex.def Info: random_cliques.pdf used on input line 197.
 (pdftex.def)             Requested size: 166.8054pt x 144.54pt.
 
-<random_alg-2.pdf, id=201, 240.06836pt x 394.09232pt>
+<random_alg-2.pdf, id=204, 240.06836pt x 394.09232pt>
 File: random_alg-2.pdf Graphic file (type pdf)
  <use random_alg-2.pdf>
 Package pdftex.def Info: random_alg-2.pdf used on input line 197.
@@ -971,7 +983,7 @@ Package pdftex.def Info: random_alg-2.pdf used on input line 197.
 
 pdfTeX warning: /usr/bin/pdflatex (file ./random_alg-2.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
->] <big_tree.pdf, id=248, 376.40625pt x 718.685pt>
+>] <big_tree.pdf, id=251, 376.40625pt x 718.685pt>
 File: big_tree.pdf Graphic file (type pdf)
  <use big_tree.pdf>
 Package pdftex.def Info: big_tree.pdf used on input line 219.
@@ -999,43 +1011,43 @@ File: big_tree.pdf Graphic file (type pdf)
 Package pdftex.def Info: big_tree.pdf used on input line 233.
 (pdftex.def)             Requested size: 72.26999pt x 137.98814pt.
 
-<poiss_size.jpg, id=298, 562.1pt x 421.575pt>
+<poiss_size.jpg, id=304, 481.8pt x 385.44pt>
 File: poiss_size.jpg Graphic file (type jpg)
  <use poiss_size.jpg>
 Package pdftex.def Info: poiss_size.jpg used on input line 233.
-(pdftex.def)             Requested size: 240.90063pt x 180.67499pt.
+(pdftex.def)             Requested size: 225.84319pt x 180.67499pt.
 
-Overfull \hbox (18.87537pt too wide) in paragraph at lines 233--233
+Overfull \hbox (3.81792pt too wide) in paragraph at lines 233--233
 [][]  
  []
 
 [8
 
- <./poiss_size.jpg>] <orig.pdf, id=326, 274.02374pt x 314.17375pt>
+ <./poiss_size.jpg>] <orig.pdf, id=332, 274.02374pt x 314.17375pt>
 File: orig.pdf Graphic file (type pdf)
 
 <use orig.pdf>
 Package pdftex.def Info: orig.pdf used on input line 255.
 (pdftex.def)             Requested size: 68.50577pt x 78.54324pt.
- <censi.pdf, id=327, 73.27374pt x 220.825pt>
+ <censi.pdf, id=333, 73.27374pt x 220.825pt>
 File: censi.pdf Graphic file (type pdf)
  <use censi.pdf>
 Package pdftex.def Info: censi.pdf used on input line 255.
 (pdftex.def)             Requested size: 21.98228pt x 66.248pt.
 
-<josh.pdf, id=328, 97.36375pt x 238.8925pt>
+<josh.pdf, id=334, 97.36375pt x 238.8925pt>
 File: josh.pdf Graphic file (type pdf)
  <use josh.pdf>
 Package pdftex.def Info: josh.pdf used on input line 255.
 (pdftex.def)             Requested size: 29.20934pt x 71.66829pt.
 
-<alberto.pdf, id=329, 97.36375pt x 238.8925pt>
+<alberto.pdf, id=335, 97.36375pt x 238.8925pt>
 File: alberto.pdf Graphic file (type pdf)
  <use alberto.pdf>
 Package pdftex.def Info: alberto.pdf used on input line 255.
 (pdftex.def)             Requested size: 29.20934pt x 71.66829pt.
 
-<exact.pdf, id=330, 73.27374pt x 142.5325pt>
+<exact.pdf, id=336, 73.27374pt x 142.5325pt>
 File: exact.pdf Graphic file (type pdf)
  <use exact.pdf>
 Package pdftex.def Info: exact.pdf used on input line 255.
@@ -1058,42 +1070,42 @@ pdfTeX warning: /usr/bin/pdflatex (file ./alberto.pdf): PDF inclusion: multiple
 
 pdfTeX warning: /usr/bin/pdflatex (file ./exact.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->] <poiss_orig.jpg, id=440, 562.1pt x 421.575pt>
+>] <poiss_orig.jpg, id=446, 473.77pt x 385.44pt>
 File: poiss_orig.jpg Graphic file (type jpg)
  <use poiss_orig.jpg>
 Package pdftex.def Info: poiss_orig.jpg used on input line 262.
-(pdftex.def)             Requested size: 327.63069pt x 245.71754pt.
+(pdftex.def)             Requested size: 302.02618pt x 245.71754pt.
 
 Overfull \vbox (9.30415pt too high) detected at line 262
  []
 
 [10
 
- <./poiss_orig.jpg>] <poiss_exact.jpg, id=468, 562.1pt x 421.575pt>
+ <./poiss_orig.jpg>] <poiss_exact.jpg, id=474, 473.77pt x 385.44pt>
 File: poiss_exact.jpg Graphic file (type jpg)
 
 <use poiss_exact.jpg>
 Package pdftex.def Info: poiss_exact.jpg used on input line 269.
-(pdftex.def)             Requested size: 327.63069pt x 245.71754pt.
+(pdftex.def)             Requested size: 302.02618pt x 245.71754pt.
 
 Overfull \vbox (9.30415pt too high) detected at line 269
  []
 
 [11
 
- <./poiss_exact.jpg>] <poiss_time.jpg, id=496, 562.1pt x 421.575pt>
+ <./poiss_exact.jpg>] <poiss_time.jpg, id=502, 481.8pt x 385.44pt>
 File: poiss_time.jpg Graphic file (type jpg)
 
 <use poiss_time.jpg>
 Package pdftex.def Info: poiss_time.jpg used on input line 276.
-(pdftex.def)             Requested size: 327.63069pt x 245.71754pt.
+(pdftex.def)             Requested size: 307.14526pt x 245.71754pt.
 
 Overfull \vbox (9.30415pt too high) detected at line 276
  []
 
 [12
 
- <./poiss_time.jpg>] <big_patho_tree.pdf, id=524, 592.2125pt x 233.87375pt>
+ <./poiss_time.jpg>] <big_patho_tree.pdf, id=531, 592.2125pt x 233.87375pt>
 File: big_patho_tree.pdf Graphic file (type pdf)
 
 <use big_patho_tree.pdf>
@@ -1102,35 +1114,35 @@ Package pdftex.def Info: big_patho_tree.pdf used on input line 286.
  [13
 
  <./big_patho_tree.pdf>]
-<patho_orig.jpg, id=569, 562.1pt x 421.575pt>
+<patho_orig.jpg, id=577, 473.77pt x 385.44pt>
 File: patho_orig.jpg Graphic file (type jpg)
  <use patho_orig.jpg>
 Package pdftex.def Info: patho_orig.jpg used on input line 293.
-(pdftex.def)             Requested size: 327.63069pt x 245.71754pt.
+(pdftex.def)             Requested size: 302.02618pt x 245.71754pt.
 
 Overfull \vbox (9.30415pt too high) detected at line 293
  []
 
 [14
 
- <./patho_orig.jpg>] <patho_exact.jpg, id=597, 562.1pt x 421.575pt>
+ <./patho_orig.jpg>] <patho_exact.jpg, id=605, 473.77pt x 385.44pt>
 File: patho_exact.jpg Graphic file (type jpg)
 
 <use patho_exact.jpg>
 Package pdftex.def Info: patho_exact.jpg used on input line 300.
-(pdftex.def)             Requested size: 327.63069pt x 245.71754pt.
+(pdftex.def)             Requested size: 302.02618pt x 245.71754pt.
 
 Overfull \vbox (9.30415pt too high) detected at line 300
  []
 
 [15
 
- <./patho_exact.jpg>] <patho_time.jpg, id=626, 562.1pt x 421.575pt>
+ <./patho_exact.jpg>] <patho_time.jpg, id=633, 481.8pt x 385.44pt>
 File: patho_time.jpg Graphic file (type jpg)
 
 <use patho_time.jpg>
 Package pdftex.def Info: patho_time.jpg used on input line 307.
-(pdftex.def)             Requested size: 327.63069pt x 245.71754pt.
+(pdftex.def)             Requested size: 307.14526pt x 245.71754pt.
 
 Overfull \vbox (9.30415pt too high) detected at line 307
  []
@@ -1162,12 +1174,12 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 311.
  ) 
 Here is how much of TeX's memory you used:
- 15984 strings out of 493304
- 295408 string characters out of 6139871
- 372541 words of memory out of 5000000
- 18998 multiletter control sequences out of 15000+600000
+ 15990 strings out of 495028
+ 295460 string characters out of 6181497
+ 368254 words of memory out of 5000000
+ 18755 multiletter control sequences out of 15000+600000
  10564 words of font info for 39 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  49i,17n,55p,395b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/shar
@@ -1176,12 +1188,12 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-courier/ucrr8a.pfb>
-Output written on minrep.pdf (16 pages, 480609 bytes).
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/q
+hvr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on minrep.pdf (16 pages, 628355 bytes).
 PDF statistics:
- 691 PDF objects out of 1000 (max. 8388607)
- 582 compressed objects within 6 object streams
+ 698 PDF objects out of 1000 (max. 8388607)
+ 587 compressed objects within 6 object streams
  35 named destinations out of 1000 (max. 500000)
  182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

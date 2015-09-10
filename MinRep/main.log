@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.15)  9 SEP 2015 10:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.15)  10 SEP 2015 06:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -830,19 +830,19 @@ msy/m/n/10 C \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f;\OML/cmm/m/it/10 ; \OT1/cmr/m
 <cdiag1.pdf, id=173, 218.8175pt x 244.915pt>
 File: cdiag1.pdf Graphic file (type pdf)
  <use cdiag1.pdf>
-Package pdftex.def Info: cdiag1.pdf used on input line 361.
+Package pdftex.def Info: cdiag1.pdf used on input line 362.
 (pdftex.def)             Requested size: 129.14127pt x 144.54pt.
 
 <cdiag2.pdf, id=174, 218.8175pt x 248.93pt>
 File: cdiag2.pdf Graphic file (type pdf)
  <use cdiag2.pdf>
-Package pdftex.def Info: cdiag2.pdf used on input line 362.
+Package pdftex.def Info: cdiag2.pdf used on input line 363.
 (pdftex.def)             Requested size: 127.0578pt x 144.54pt.
 
 <cdiag3.pdf, id=175, 179.61552pt x 210.68073pt>
 File: cdiag3.pdf Graphic file (type pdf)
  <use cdiag3.pdf>
-Package pdftex.def Info: cdiag3.pdf used on input line 363.
+Package pdftex.def Info: cdiag3.pdf used on input line 364.
 (pdftex.def)             Requested size: 72.26999pt x 84.76907pt.
  [4 <./media/random_cliques.pdf> <./media/random_alg-2.pdf
 
@@ -850,11 +850,11 @@ pdfTeX warning: /usr/bin/pdflatex (file ./media/random_alg-2.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >] [5 <./cdiag1.pdf> <./cdiag2.pdf> <./cdiag3.pdf>]
 
-Package natbib Warning: Citation `karp72' on page 6 undefined on input line 426
+Package natbib Warning: Citation `karp72' on page 6 undefined on input line 427
 .
 
 
-Overfull \hbox (22.80664pt too wide) in paragraph at lines 386--427
+Overfull \hbox (22.80664pt too wide) in paragraph at lines 387--428
 \OT1/cmr/m/n/10 ing $\OML/cmm/m/it/10 S \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OM
 L/cmm/m/it/10 s[]; s[]; [] ; s[]\OMS/cmsy/m/n/10 g$ $[$ $f\OML/cmm/m/it/10 s[];
  s[]; [] ; s[]\OMS/cmsy/m/n/10 g$ $[$ $[] $ $[$ $f\OML/cmm/m/it/10 s[]; s[]; []
@@ -863,34 +863,34 @@ L/cmm/m/it/10 s[]; s[]; [] ; s[]\OMS/cmsy/m/n/10 g$ $[$ $f\OML/cmm/m/it/10 s[];
 
 
 Package natbib Warning: Citation `4813796' on page 6 undefined on input line 42
-8.
+9.
 
 
-Package natbib Warning: Citation `karp72' on page 6 undefined on input line 430
+Package natbib Warning: Citation `karp72' on page 6 undefined on input line 431
 .
 
 <bad_greedy.pdf, id=221, 401.62547pt x 250.53598pt>
 File: bad_greedy.pdf Graphic file (type pdf)
  <use bad_greedy.pdf>
-Package pdftex.def Info: bad_greedy.pdf used on input line 443.
+Package pdftex.def Info: bad_greedy.pdf used on input line 444.
 (pdftex.def)             Requested size: 289.07999pt x 180.33987pt.
 
 <good_greedy.pdf, id=222, 401.62547pt x 250.53601pt>
 File: good_greedy.pdf Graphic file (type pdf)
  <use good_greedy.pdf>
-Package pdftex.def Info: good_greedy.pdf used on input line 445.
+Package pdftex.def Info: good_greedy.pdf used on input line 446.
 (pdftex.def)             Requested size: 289.07999pt x 180.3399pt.
 
 [6] <poiss_size.jpg, id=228, 481.8pt x 385.44pt>
 File: poiss_size.jpg Graphic file (type jpg)
  <use poiss_size.jpg>
-Package pdftex.def Info: poiss_size.jpg used on input line 477.
+Package pdftex.def Info: poiss_size.jpg used on input line 478.
 (pdftex.def)             Requested size: 162.60416pt x 130.08621pt.
 
 <big_tree_left.pdf, id=229, 376.40625pt x 718.685pt>
 File: big_tree_left.pdf Graphic file (type pdf)
  <use big_tree_left.pdf>
-Package pdftex.def Info: big_tree_left.pdf used on input line 479.
+Package pdftex.def Info: big_tree_left.pdf used on input line 480.
 (pdftex.def)             Requested size: 68.12926pt x 130.08621pt.
 
 <big_patho_tree.pdf, id=230, 592.2125pt x 233.87375pt>
@@ -903,32 +903,72 @@ Package pdftex.def Info: big_patho_tree.pdf used on input line 492.
 File: orig.pdf Graphic file (type pdf)
 
 <use orig.pdf>
-Package pdftex.def Info: orig.pdf used on input line 502.
+Package pdftex.def Info: orig.pdf used on input line 499.
 (pdftex.def)             Requested size: 68.50577pt x 78.54324pt.
  <censi.pdf, id=232, 73.27374pt x 220.825pt>
 File: censi.pdf Graphic file (type pdf)
  <use censi.pdf>
-Package pdftex.def Info: censi.pdf used on input line 505.
+Package pdftex.def Info: censi.pdf used on input line 502.
 (pdftex.def)             Requested size: 21.98228pt x 66.248pt.
 
 <josh.pdf, id=233, 97.36375pt x 238.8925pt>
 File: josh.pdf Graphic file (type pdf)
  <use josh.pdf>
-Package pdftex.def Info: josh.pdf used on input line 508.
+Package pdftex.def Info: josh.pdf used on input line 505.
 (pdftex.def)             Requested size: 29.20934pt x 71.66829pt.
 
 <alberto.pdf, id=234, 97.36375pt x 238.8925pt>
 File: alberto.pdf Graphic file (type pdf)
  <use alberto.pdf>
-Package pdftex.def Info: alberto.pdf used on input line 511.
+Package pdftex.def Info: alberto.pdf used on input line 508.
 (pdftex.def)             Requested size: 29.20934pt x 71.66829pt.
 
 <exact.pdf, id=235, 73.27374pt x 142.5325pt>
 File: exact.pdf Graphic file (type pdf)
  <use exact.pdf>
-Package pdftex.def Info: exact.pdf used on input line 514.
+Package pdftex.def Info: exact.pdf used on input line 511.
 (pdftex.def)             Requested size: 21.98228pt x 42.76007pt.
- [7] [8 <./bad_greedy.pdf> <./good_greedy.pdf
+
+<poiss_orig.jpg, id=236, 473.77pt x 385.44pt>
+File: poiss_orig.jpg Graphic file (type jpg)
+ <use poiss_orig.jpg>
+Package pdftex.def Info: poiss_orig.jpg used on input line 525.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<patho_orig.jpg, id=237, 473.77pt x 385.44pt>
+File: patho_orig.jpg Graphic file (type jpg)
+ <use patho_orig.jpg>
+Package pdftex.def Info: patho_orig.jpg used on input line 527.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<poiss_exact.jpg, id=238, 473.77pt x 385.44pt>
+File: poiss_exact.jpg Graphic file (type jpg)
+ <use poiss_exact.jpg>
+Package pdftex.def Info: poiss_exact.jpg used on input line 529.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<patho_exact.jpg, id=239, 473.77pt x 385.44pt>
+File: patho_exact.jpg Graphic file (type jpg)
+ <use patho_exact.jpg>
+Package pdftex.def Info: patho_exact.jpg used on input line 531.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<poiss_time.jpg, id=240, 481.8pt x 385.44pt>
+File: poiss_time.jpg Graphic file (type jpg)
+ <use poiss_time.jpg>
+Package pdftex.def Info: poiss_time.jpg used on input line 533.
+(pdftex.def)             Requested size: 153.56895pt x 122.85876pt.
+
+<patho_time.jpg, id=241, 481.8pt x 385.44pt>
+File: patho_time.jpg Graphic file (type jpg)
+ <use patho_time.jpg>
+Package pdftex.def Info: patho_time.jpg used on input line 535.
+(pdftex.def)             Requested size: 153.56895pt x 122.85876pt.
+)
+
+Package natbib Warning: There were undefined citations.
+
+[7] [8 <./bad_greedy.pdf> <./good_greedy.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./good_greedy.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
@@ -956,47 +996,8 @@ pdfTeX warning: /usr/bin/pdflatex (file ./alberto.pdf): PDF inclusion: multiple
 
 pdfTeX warning: /usr/bin/pdflatex (file ./exact.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->] <poiss_orig.jpg, id=384, 473.77pt x 385.44pt>
-File: poiss_orig.jpg Graphic file (type jpg)
- <use poiss_orig.jpg>
-Package pdftex.def Info: poiss_orig.jpg used on input line 528.
-(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
-
-<patho_orig.jpg, id=385, 473.77pt x 385.44pt>
-File: patho_orig.jpg Graphic file (type jpg)
- <use patho_orig.jpg>
-Package pdftex.def Info: patho_orig.jpg used on input line 530.
-(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
-
-<poiss_exact.jpg, id=386, 473.77pt x 385.44pt>
-File: poiss_exact.jpg Graphic file (type jpg)
- <use poiss_exact.jpg>
-Package pdftex.def Info: poiss_exact.jpg used on input line 532.
-(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
-
-<patho_exact.jpg, id=387, 473.77pt x 385.44pt>
-File: patho_exact.jpg Graphic file (type jpg)
- <use patho_exact.jpg>
-Package pdftex.def Info: patho_exact.jpg used on input line 534.
-(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
-
-<poiss_time.jpg, id=388, 481.8pt x 385.44pt>
-File: poiss_time.jpg Graphic file (type jpg)
- <use poiss_time.jpg>
-Package pdftex.def Info: poiss_time.jpg used on input line 536.
-(pdftex.def)             Requested size: 153.56895pt x 122.85876pt.
-
-<patho_time.jpg, id=389, 481.8pt x 385.44pt>
-File: patho_time.jpg Graphic file (type jpg)
- <use patho_time.jpg>
-Package pdftex.def Info: patho_time.jpg used on input line 538.
-(pdftex.def)             Requested size: 153.56895pt x 122.85876pt.
-)
-
-Package natbib Warning: There were undefined citations.
-
-[10 <./poiss_orig.jpg> <./patho_orig.jpg> <./poiss_exact.jpg> <./patho_exact.jp
-g> <./poiss_time.jpg> <./patho_time.jpg>] (./main.aux)
+>] [10 <./poiss_orig.jpg> <./patho_orig.jpg> <./poiss_exact.jpg> <./patho_exact
+.jpg> <./poiss_time.jpg> <./patho_time.jpg>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1004,7 +1005,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  14006 strings out of 495028
  248815 string characters out of 6181497
- 302780 words of memory out of 5000000
+ 302779 words of memory out of 5000000
  16873 multiletter control sequences out of 15000+600000
  10922 words of font info for 42 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1028,7 +1029,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1
 /symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on main.pdf (10 pages, 961787 bytes).
+Output written on main.pdf (10 pages, 961998 bytes).
 PDF statistics:
  451 PDF objects out of 1000 (max. 8388607)
  300 compressed objects within 3 object streams

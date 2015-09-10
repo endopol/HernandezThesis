@@ -356,6 +356,7 @@ This informs the following algorithm
 The Bit-at-a-Time reduction, proposed by Andrea Censi, generates a set of states one at a time,
 separating ambiguous contexts recursively.  An ambiguous context is an (input, state) pair for
 which more than one output is defined.  Ambiguities which arise in shorter sequences are separated first.
+This results in an FSM whose graph structure is a subtree of the original decision tree.
 \begin{figure}
 \centering
 \subfigure[Decision Tree]{\includegraphics[height=2in]{cdiag1}}
@@ -516,8 +517,21 @@ The last three methods are equivalent up to a reordering of states,
 so reductions (c) and (d) are practically identical. 
 }
 \end{figure}
-\section{Discussion}
+\subsection{Discussion}
+The Bit-at-a-time algorithm consistently underperformed all of the greedy clique-assembly
+algorithms, both in time requirements (finding the earliest ambiguous
+contexts took $O(N^3)$ time), and in reduction performance.  However, the 
+subtree property of its output may make it better suited for applications
+that require running ``in-place''.
 
+Greedy algorithms seem to be the best choice, although they left something to be desired.
+Although better heuristics helped to reduce the likelihood of non-optimal reduction,
+it was not hard to find policies that could trip them up.
+
+Although it is not certain how much of this work can be generalized to more
+interesting robotics applications (e.g. continuous time, continuous input/output,
+probabilistic systems), our results suggest that some general-purpose
+ambiguity-splitting scheme could eventually be applied to all types of POMDP solvers.
 \begin{figure}
 \centering
 \subfigure[Poisson Trees Reduced vs.\ Orig.\ Size]{
@@ -537,5 +551,9 @@ so reductions (c) and (d) are practically identical.
 {green} bars pertain to the greedy clique completion method, 
 and
 {black} bars pertain to an exhaustive search for a minimal reduction.
+The black dotted line in the first two rows of figures plots the line $y=x$.  Note the greater
+proportion (50\% or greater) of nonoptimal reductions in th
+pathological (``Patho.'') examples, and the clear separation in performance between 
+the bit-at-a-time and greedy methods.
 }
 \end{figure}

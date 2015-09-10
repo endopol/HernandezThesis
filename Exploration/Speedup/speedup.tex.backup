@@ -29,11 +29,11 @@ Recall that the update probability for our Monte Carlo Ising process is
 \def\bI{\bar{I}}
 \def\ber{\operatorname{Bernoulli}}
 \begin{align}
-P(I^{t+1}_{ij} = 1|I^t) = \frac{\exp\bigl(-\beta (I^t_{i+1,j} + I^t_{i,j+1} + I^t_{i-1,j} + I^t_{i,j-1}-2)  \bigr)}
-{\exp\bigl(-\beta (I^t_{i+1,j} + I^t_{i,j+1} + I^t_{i-1,j} + I^t_{i,j-1}-2) + \exp\bigl(-\beta (I^t_{i+1,j} + I^t_{i,j+1} + I^t_{i-1,j} + I^t_{i,j-1}-2)}
+P(I^{t+1}_{ij} = 1|I^t) = \frac{\exp\bigl(\beta (H_{ij}^t-2)\bigr)}
+{\exp\bigl(\beta (H_{ij}^t-2) \bigr) + \exp\bigl(-\beta (H_{ij}^t-2) \bigr)}
 \end{align}
 where
-$$H_{ij}^t := I^t_{i+1,j} + I^t_{i,j+1} + I^t_{i-1,j} + I^t_{i,j-1} - 2$$
+$$H_{ij}^t := I^t_{i+1,j} + I^t_{i,j+1} + I^t_{i-1,j} + I^t_{i,j-1}$$
 This computation, which produces a single random bit, requires a new random floating-point number to be generated each time it is run.  
 Many such bits need to be averaged to compute the marginal obstacle probabilities.
 If this operation could be approximated using only bit-wise operations, we could run these operations in parallel, one for each
@@ -73,12 +73,9 @@ E(\bI^{t+1}_{ij}) =
 \end{cases}
 \end{equation}
 
-\subsubsection{Quality of the estimate}
-How good is the estimate? See Fig.
-
-\ \ref{fig: parcompare}.
-
-$$P(I_{ij}^{t+1} = 1 | I_{ij}^t) = $$
+%\subsubsection{Quality of the estimate}
+%How good is the estimate? See Fig. \ref{fig: parcompare}.
+%$$P(I_{ij}^{t+1} = 1 | I_{ij}^t) = $$
 
 \begin{figure}
 \includegraphics[width=1.5in]{Parallel_Bits/isingup}
@@ -140,6 +137,7 @@ the bits $(L^k)_{i_1}$ and $(L^k)_{i_1}$ are highly correlated, especially for l
 In modern processors, the bit-shift operation runs in constant time, so
 the random lookup integers $\{L^k, \ldots, L^k\}$ are generated in $O(K)$ time.
 
+\iffalse
 \subsection{Mesh}
 \begin{figure}
 \begin{tabular}{ccc}
@@ -150,3 +148,4 @@ the random lookup integers $\{L^k, \ldots, L^k\}$ are generated in $O(K)$ time.
 \end{tabular}
 \caption{\emph{Finite-Element Approximation}}
 \end{figure}
+\fi

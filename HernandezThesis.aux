@@ -220,231 +220,237 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.3}Poisson-Disk Approximation}{68}}
 \newlabel{compute_weights}{{4.5.2.4}{69}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2.4}Computing the Weights $w_g$ }{69}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Numerical Optimizations}{70}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Bit-Parallel Monte Carlo}{70}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1.1}Overview}{70}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1.2}Computing the counts $C_k$}{71}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1.3}Generating I.I.D. Bits}{71}}
 \citation{lacoin2011zero}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Exploration}{70}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Visibility}}}{70}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Marginal Likelihood}}}{70}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Viewpoint Quality}}}{70}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Visibility}}}{70}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Marginal Likelihood}}}{70}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Viewpoint Quality}}}{70}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Performance Bounds}{70}}
-\newlabel{equi}{{4.6.1}{70}}
-\newlabel{Mbound}{{4.11}{72}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Exploration}{73}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Visibility}}}{73}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Marginal Likelihood}}}{73}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Viewpoint Quality}}}{73}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Performance Bounds}{73}}
+\newlabel{equi}{{4.7.1}{73}}
 \citation{valenteTS13}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Exploration Results}{73}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Numerical Optimizations}{73}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Bit-Parallel Monte Carlo}{73}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1.1}Overview}{73}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1.2}Computing the counts $C_k$}{74}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1.3}Generating I.I.D. Bits}{74}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph  {Computing Sample Weights for a Radial Sampling Grid} \textbf  {(a)} The weight $w_{ij}$ is the expected energy gain from a sample at position $x+g_{ij}$ in $G(x)$. \textbf  {(b)} The entropy of a sample from a random coloring of a random partition is taken as the expected value of the reciprocal of the number of samples with which it shares a cell (argument detailed in 4.5.2.4\hbox {}). \textbf  {(c)} Since the sampling pattern $G$ is radially symmetric, the weights $w_{ij}$ can be described by a radial ``profile''. The weight profile can be divided into three phases: The first phase, when nodes are likely to share cells with angular neighbors, shows a increase in weight as radius increases and radial neighbors get further and further away. The second phase, when angular neighbors are too far away to share cells, has constant weight. The third phase, as we reach the edge of the sampling pattern, shows a rapid doubling of weight, as nodes with many inner and outer (smaller or greater radius) neighbors give way to nodes with few or no outer neighbors. }}{76}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Sampling Grid over random partition}}}{76}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Counting neighbors}}}{76}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Weight Profile}}}{76}}
-\newlabel{fig:weights}{{4.5}{76}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \emph  {Ising Model on a $4\times 4$ Lattice} Likelihood under the Ising Model decreases exponentially with the number of edges between disagreeing nodes. Samples from the Ising Model are concentrated near the two minimum energy configurations: all-white or all-black.  }}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {High / Low Energy Configurations}}}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Minimum Energy Configurations}}}{77}}
-\newlabel{figure: ising}{{4.6}{77}}
-\newlabel{fig: ising}{{4.5.2.2}{77}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph  {Ising-type Obstacle Posterior} (a) The random process described in 4.5.2.2\hbox {} is run on a scene with a rectangular shadow region (gray) produced by a flat obstacle edge (white). Black denotes known free space. (b)-(e) Top row: Images produced by the process. Bottom row: Average of 1000 runs. }}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Visibility}}}}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {0 Iterations}}}}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {100 Iter.}}}}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {200 Iter.}}}}{77}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {400 Iter.}}}}{77}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph  {Extinction Profiles}  Here we show extinction profiles for Ising scenes with various granularities, indexed by number of update iterations. Instantaneous mean free path (derivative of log survival probability) and best-fit MFP are plotted together, showing that extinction in these scenes is well-modeled by an exponential decay. }}{78}}
-\newlabel{fig: MFP}{{4.8}{78}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph  {Generating Poisson-Voronoi Checkerboard}  (a) To produce a scene of desired granulation, we first produce a Poisson-Disc sampling of the domain, which gives a maximal set of points satisfying the property that the distance between two points is no less than $r$, a granularity parameter. (2) We compute a Voronoi partition of the scene based on that sampling (3) We color the cells independently, denoting them as obstacle or free space, with probability 1/2. }}{79}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Poisson-Disk Sampling}}}{79}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Voronoi Partition}}}{79}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Checkerboard}}}{79}}
-\newlabel{fig:random coloring}{{4.9}{79}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \emph  {Poisson-Voronoi Checkerboard} There is a superficial resemblance Ising-type obstacles and Voronoi checkerboards with appropriate scale parameters. }}{79}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Ising Textures}}}{79}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Corresponding Voronoi Checkerboards}}}{79}}
-\newlabel{fig:Correspondence}{{4.10}{79}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces \emph  {2D Weight Profiles for Various $r$} Using the counting technique described in 4.5.1.2\hbox {}, we compute the information contribution, in bits, of samples at different (radial) positions on the radial sampling pattern (See Fig.\ 4.3\hbox {}), with regard to Poisson-Disc Voronoi scenes of various scales. In this case, we have 30 angular divisions and 200 radial divisions within a maximum radius of one unit. }}{80}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces \emph  {3D Weight Profiles for Various $r$} The counting technique described in 4.5.1.2\hbox {} is applied to 3D Poisson-Disc Voronoi Scenes, drawing from a spherical sampling pattern (a) with 30 azimuthal, 200 radial, and 11 elevation divisions. Again, radial symmetry around the vertical axis allows us to ignore azimuthal index. }}{80}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Pattern}}}{80}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {r=0.02}}}{80}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {r=0.04}}}{80}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {r=0.08}}}{80}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {r=0.06}}}{80}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces \emph  {Entropy Comparisons}}}{81}}
-\newlabel{fig:comparisons}{{4.13}{81}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Exploration comparison with Valente et al.}}{84}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {\unhbox \voidb@x \hbox {Exploration Stats}, Valente et al.}}}{84}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {\unhbox \voidb@x \hbox {Exploration Stats}, Ising Marginals}}}{84}}
-\newlabel{fig:valente}{{4.14}{84}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces \emph  {Bit-Parallel Computation of Ising Marginal} ``Bit twiddling'' allows us to compute 64 simultaneous realizations of the Ising process on a single array of long integers. In the plots above, color is assigned according to nominal integer value, i.e.\tmspace  +\thinmuskip {.1667em} each realization contributes according to the significance of its bit position. This is the most direct way of visualizing the data, and the exponential decay of bit significance gives a sense of transparency and depth. Cf. Fig. 4.5.2.2\hbox {} }}{84}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces \emph  {Comparison of Update Probabilities:} Values of $\mathaccentV {bar}016\beta $ are taken from 0 to 6. $\beta $ is taken such that $\qopname  \relax o{log}(2)\mathaccentV {bar}016\beta = \beta $. Update probabilities for the Ising Model and the parallel bit estimate are computed on the continuum $[0,4]$, although only integers $\{0, \ldots  4\}$ are used in practice.}}{85}}
-\newlabel{fig: parcompare}{{4.16}{85}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Desiging Agents with Task-Specific Minimal Representation}{86}}
+\newlabel{Mbound}{{4.18}{75}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Exploration Results}{76}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph  {Computing Sample Weights for a Radial Sampling Grid} \textbf  {(a)} The weight $w_{ij}$ is the expected energy gain from a sample at position $x+g_{ij}$ in $G(x)$. \textbf  {(b)} The entropy of a sample from a random coloring of a random partition is taken as the expected value of the reciprocal of the number of samples with which it shares a cell (argument detailed in 4.5.2.4\hbox {}). \textbf  {(c)} Since the sampling pattern $G$ is radially symmetric, the weights $w_{ij}$ can be described by a radial ``profile''. The weight profile can be divided into three phases: The first phase, when nodes are likely to share cells with angular neighbors, shows a increase in weight as radius increases and radial neighbors get further and further away. The second phase, when angular neighbors are too far away to share cells, has constant weight. The third phase, as we reach the edge of the sampling pattern, shows a rapid doubling of weight, as nodes with many inner and outer (smaller or greater radius) neighbors give way to nodes with few or no outer neighbors. }}{77}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Sampling Grid over random partition}}}{77}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Counting neighbors}}}{77}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Weight Profile}}}{77}}
+\newlabel{fig:weights}{{4.5}{77}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \emph  {Ising Model on a $4\times 4$ Lattice} Likelihood under the Ising Model decreases exponentially with the number of edges between disagreeing nodes. Samples from the Ising Model are concentrated near the two minimum energy configurations: all-white or all-black.  }}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {High / Low Energy Configurations}}}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Minimum Energy Configurations}}}{78}}
+\newlabel{figure: ising}{{4.6}{78}}
+\newlabel{fig: ising}{{4.5.2.2}{78}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph  {Ising-type Obstacle Posterior} (a) The random process described in 4.5.2.2\hbox {} is run on a scene with a rectangular shadow region (gray) produced by a flat obstacle edge (white). Black denotes known free space. (b)-(e) Top row: Images produced by the process. Bottom row: Average of 1000 runs. }}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Visibility}}}}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {0 Iterations}}}}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {100 Iter.}}}}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {200 Iter.}}}}{78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {400 Iter.}}}}{78}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph  {Extinction Profiles}  Here we show extinction profiles for Ising scenes with various granularities, indexed by number of update iterations. Instantaneous mean free path (derivative of log survival probability) and best-fit MFP are plotted together, showing that extinction in these scenes is well-modeled by an exponential decay. }}{79}}
+\newlabel{fig: MFP}{{4.8}{79}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph  {Generating Poisson-Voronoi Checkerboard}  (a) To produce a scene of desired granulation, we first produce a Poisson-Disc sampling of the domain, which gives a maximal set of points satisfying the property that the distance between two points is no less than $r$, a granularity parameter. (2) We compute a Voronoi partition of the scene based on that sampling (3) We color the cells independently, denoting them as obstacle or free space, with probability 1/2. }}{80}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Poisson-Disk Sampling}}}{80}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Voronoi Partition}}}{80}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Checkerboard}}}{80}}
+\newlabel{fig:random coloring}{{4.9}{80}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \emph  {Poisson-Voronoi Checkerboard} There is a superficial resemblance Ising-type obstacles and Voronoi checkerboards with appropriate scale parameters. }}{80}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Ising Textures}}}{80}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Corresponding Voronoi Checkerboards}}}{80}}
+\newlabel{fig:Correspondence}{{4.10}{80}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces \emph  {2D Weight Profiles for Various $r$} Using the counting technique described in 4.5.1.2\hbox {}, we compute the information contribution, in bits, of samples at different (radial) positions on the radial sampling pattern (See Fig.\ 4.3\hbox {}), with regard to Poisson-Disc Voronoi scenes of various scales. In this case, we have 30 angular divisions and 200 radial divisions within a maximum radius of one unit. }}{81}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces \emph  {3D Weight Profiles for Various $r$} The counting technique described in 4.5.1.2\hbox {} is applied to 3D Poisson-Disc Voronoi Scenes, drawing from a spherical sampling pattern (a) with 30 azimuthal, 200 radial, and 11 elevation divisions. Again, radial symmetry around the vertical axis allows us to ignore azimuthal index. }}{81}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Pattern}}}{81}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {r=0.02}}}{81}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {r=0.04}}}{81}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {r=0.08}}}{81}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {r=0.06}}}{81}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces \emph  {Entropy Comparisons}}}{82}}
+\newlabel{fig:comparisons}{{4.13}{82}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces \emph  {Bit-Parallel Computation of Ising Marginal} ``Bit twiddling'' allows us to compute 64 simultaneous realizations of the Ising process on a single array of long integers. In the plots above, color is assigned according to nominal integer value, i.e.\tmspace  +\thinmuskip {.1667em} each realization contributes according to the significance of its bit position. This is the most direct way of visualizing the data, and the exponential decay of bit significance gives a sense of transparency and depth. Cf. Fig. 4.5.2.2\hbox {} }}{83}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces \emph  {Comparison of Update Probabilities:} Values of $\mathaccentV {bar}016\beta $ are taken from 0 to 6. Update probabilities for the Ising Model and the parallel bit estimate are computed on the continuum $[0,4]$, although only integers $\{0, \ldots  4\}$ are used in practice.}}{83}}
+\newlabel{fig: parcompare}{{4.15}{83}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces \emph  {Exploration of a 2D Scene} An explorer (red dot) attempts to efficiently map an unknown scene (a) by greedily choosing informative viewpoints (c). Observe that we are not merely uncovering area. Once the disposition of a site has been determined with high confidence (b), that site loses its informative value.}}{84}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Visibility}}}{84}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Marginal Likelihood}}}{84}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Viewpoint Quality}}}{84}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Exploration comparison with Valente et al. }}{86}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {\unhbox \voidb@x \hbox {Exploration Stats}, Valente et al.}}}{86}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {\unhbox \voidb@x \hbox {Exploration Stats}, Ising Marginals}}}{86}}
+\newlabel{fig:valente}{{4.17}{86}}
+\citation{hopcroft1971n}
+\citation{Pfleeger:1973:SRI:1311965.1312829,grasselli1965method,goren2007state}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Desiging Agents with Task-Specific Minimal Representation}{87}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{86}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Previous Work}{86}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Formalization}{86}}
-\newlabel{ex:complete}{{5.2.1}{87}}
-\newlabel{fig:best_completion}{{5.1(f)}{88}}
-\newlabel{sub@fig:best_completion}{{(f)}{88}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Decision Table}}}{88}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Decision Tree}}}{88}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Minimal Policy}}}{88}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Decision Table}}}{88}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Decision Tree}}}{88}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Minimal Policy}}}{88}}
-\newlabel{ex:canon}{{5.2.2}{89}}
-\newlabel{fig:incomplete}{{5.2.3}{90}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{87}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Previous Work}{87}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \emph  {Representation Reduction} Canonical belief spaces can become a serious informational bottleneck between inference and planning modules. An agent's understanding of its environment need not be any richer than necessary to support the task at hand.}}{88}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Contributions}{88}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Formalization}{88}}
+\newlabel{ex:canon}{{5.2.1}{89}}
+\newlabel{fig:incomplete}{{5.2.2}{90}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Decision Table}}}{90}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Decision Tree}}}{90}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Representation}}}{90}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Minimal Policy}}}{90}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}FSM Reduction}{90}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Representation Reduction Strategies}{90}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Canonical Representation}}}{90}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Compatibility Matrix}}}{90}}
-\newlabel{fig:cgam}{{5.4(b)}{90}}
-\newlabel{sub@fig:cgam}{{(b)}{90}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \emph  {Greedy Reduction Algorithm} A ``running clique'' is kept, to which new states are added until all remaining states are incompatible with at least one state in the clique. Then, a new clique is begun. Here, the cliques are $\{1, 2, 3, 6, 8, 9, 10, 11, 12, 13, 14, 16, 19, 22, 26, 27, 28, 29, 30, 31, 32\}$ (red), $\{4, 15, 18\}$ (blue), $\{5, 17, 21, 22, 23\}$ (yellow), and $\{7\}$ (green). (d) shows the resulting policy graph once }}{91}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Greedy Clique Covering of 5.4(b)\hbox {}}}}{91}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Reduced Representation}}}{91}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Representation Reduction Strategies}{91}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Canonical Representation}}}{91}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Compatibility Matrix}}}{91}}
+\newlabel{fig:cgam}{{5.3(b)}{91}}
+\newlabel{sub@fig:cgam}{{(b)}{91}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Reducibility Relations}{91}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Bit-at-a-Time}{92}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Decision Tree}}}{92}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Partitioned Tree}}}{92}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Reduced FSM}}}{92}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Compute Reducibility Relations}}{93}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \emph  {Greedy Reduction Algorithm} A ``running clique'' is kept, to which new states are added until all remaining states are incompatible with at least one state in the clique. Then, a new clique is begun. Here, the cliques are $\{1, 2, 3, 6, 8, 9, 10, 11, 12, 13, 14, 16, 19, 22, 26, 27, 28, 29, 30, 31, 32\}$ (red), $\{4, 15, 18\}$ (blue), $\{5, 17, 21, 22, 23\}$ (yellow), and $\{7\}$ (green). (d) shows the resulting policy graph once }}{92}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Greedy Clique Covering of 5.3(b)\hbox {}}}}{92}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Reduced Representation}}}{92}}
+\newlabel{algo: Hopcroft}{{5.3.1}{93}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces (Hopcroft) Compute Reducibility Relations}}{93}}
 \newlabel{alg1}{{1}{93}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \emph  {Censi's Bit-at-a-time Algorithm}}}{94}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Decision Tree}}}{94}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Partitioned Tree}}}{94}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Reduced FSM}}}{94}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Bit-at-a-Time}{94}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Greedy Covering}{94}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Assembling Cliques}{94}}
+\citation{karp72}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Assembling Cliques}{95}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Greedy Clique Covering}}{95}}
 \newlabel{alg2}{{2}{95}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces {} In }}{96}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Bad Ordering}}}{96}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Good Ordering}}}{96}}
-\bibstyle{plain}
-\bibdata{Exploration/exploration.bib,Exploration/text.bib,Observability/self.bib,Observability/filter.bib,Observability/total2.bib,SolidObjects/cvpr2015_solobj/bib/solidObjDet.bib,SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib,SolidObjects/cvpr2015_solobj/bib/total2.bib,SolidObjects/cvpr2015_solobj/bib/taylorARS12.bib,SolidObjects/cvpr2015_solobj/bib/ayvaciS13.bib,SolidObjects/cvpr2015_solobj/bib/ayvaciS11mdl.bib,SolidObjects/cvpr2015_solobj/bib/trevor.bib}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Alberto and Sim\~ao}{97}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.5.1}Maximal Anticlique}{97}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.5.2}Limitations}{97}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.6}Exhaustive Search}{97}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.7}Comparisons}{97}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.7.1}Poisson Random Tree}{97}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.7.2}Pathological Tree}{97}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \emph  {Poisson Random Tree} Generated by recursively adding $X\sim \operatorname  {Poisson(\lambda )}$ children to each new node. Result is conditioned on process not terminating before depth $H$. Models a birth/death process where individuals continuously produce offspring at a rate of $\lambda $ per lifetime. }}{98}}
+\citation{4813796}
+\citation{karp72}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Maximal Anticlique}{96}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.6}Comparisons}{96}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \emph  {Greedy Algorithm on Pathological Trees}  Here we illustrate the dependence of greedy algorithms on the order of their inputs. In the first set of figures (a), we proceed randomly, greedily adding random states to a running clique until none can be added (no two states sharing an edge in the distinction graph can be part of the same clique). This results in one more clique than is necessary - proceeding counterclockwise, we cover the set with only two cliques. Alberto and Sim\~ao's maximum anticlique algorithm fares no better, as the maximal anticlique has size 2. }}{97}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Bad Ordering}}}{97}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Good Ordering}}}{97}}
+\newlabel{goodbad_order}{{5.5}{97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \emph  {Poisson Random Tree}}}{98}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Poisson Tree Growth Trend}}}{98}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Tree, Depth 10}}}{98}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \emph  {Pathological Tree} This tree was designed to frustrate the algorithm of Alberto and Sim\~ao. Each of its states at depth 1 is incompatible with exactly two others. The resulting distinction graph consists of disjoint rings. }}{98}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.6.1}Poisson Random Tree}{98}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.6.2}Pathological Tree}{98}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \emph  {Pathological Tree} }}{99}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces \emph  {Typical Reductions} Here we contrast the results of the various reduction algorithms introduced above. The Bit-at-a-Time method (b) produces a minimal sub-tree of the canonical policy. The last three methods are equivalent up to a reordering of states, so reductions (c) and (d) are practically identical. }}{99}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Original}}}}{99}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Bit-at-a-Time}}}}{99}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Greedy}}}}{99}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Alberto-Sim\~ao}}}}{99}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {\relax \fontsize {8}{9.5}\selectfont {Exact}}}}{99}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces \emph  {} {Red} bars pertain to Alberto and Sim\~ao's method, {blue} bars pertain to the bit-at-a time method, {green} bars pertain to the greedy clique completion method, and {black} bars pertain to an exhaustive search for a minimal reduction. }}{100}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Poisson Trees Reduced vs.\ Orig.\ Size}}}{100}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Patho.\ Trees Reduced vs.\ Orig.\ Size}}}{100}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Poisson Trees Reduced vs.\ Min.\ Size}}}{100}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Patho.\ Trees Reduced vs.\ Min.\ Size}}}{100}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Algo.\ Runtimes on Poison Trees}}}{100}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Algo.\ Runtimes on Patho.\ Trees}}}{100}}
-\bibcite{algoet94}{{1}{}{{}}{{}}}
-\bibcite{anand2012contextually}{{2}{}{{}}{{}}}
-\bibcite{cassandraKL94}{{3}{}{{}}{{}}}
-\bibcite{arbelF01}{{4}{}{{}}{{}}}
-\bibcite{atanasovSLKPD13}{{5}{}{{}}{{}}}
-\bibcite{AZCXT11}{{6}{}{{}}{{}}}
-\bibcite{ayvaciS12PAMI}{{7}{}{{}}{{}}}
-\bibcite{basile1969observability}{{8}{}{{}}{{}}}
-\bibcite{bezzaoucha2011unknown}{{9}{}{{}}{{}}}
-\bibcite{bleyerRR12}{{10}{}{{}}{{}}}
-\bibcite{burnsB03}{{11}{}{{}}{{}}}
-\bibcite{Campbell13_NIPS}{{12}{}{{}}{{}}}
-\bibcite{carreira_eccv12}{{13}{}{{}}{{}}}
-\bibcite{Chen:2009:ABF}{{14}{}{{}}{{}}}
-\bibcite{Collins1996}{{15}{}{{}}{{}}}
-\bibcite{connolly85}{{16}{}{{}}{{}}}
-\bibcite{denzlerB02}{{17}{}{{}}{{}}}
-\bibcite{Dhillon07_TPAMI}{{18}{}{{}}{{}}}
-\bibcite{dimassi2010robust}{{19}{}{{}}{{}}}
-\bibcite{WeiFeng:cw}{{20}{}{{}}{{}}}
-\bibcite{VittorioFerrari:2006uf}{{21}{}{{}}{{}}}
-\bibcite{hollinger12}{{22}{}{{}}{{}}}
-\bibcite{geyer91}{{23}{}{{}}{{}}}
-\bibcite{Graber2011}{{24}{}{{}}{{}}}
-\bibcite{haene2013}{{25}{}{{}}{{}}}
-\bibcite{hamano1983unknown}{{26}{}{{}}{{}}}
-\bibcite{hammouri2010unknown}{{27}{}{{}}{{}}}
-\bibcite{hauskrecht00}{{28}{}{{}}{{}}}
-\bibcite{baoS12}{{29}{}{{}}{{}}}
-\bibcite{jonesS09}{{30}{}{{}}{{}}}
-\bibcite{jonesS07}{{31}{}{{}}{{}}}
-\bibcite{Kalogerakis:2010:labelMeshes}{{32}{}{{}}{{}}}
-\bibcite{kellyS09}{{33}{}{{}}{{}}}
-\bibcite{khler2013efficient}{{34}{}{{}}{{}}}
-\bibcite{Klein2007}{{35}{}{{}}{{}}}
-\bibcite{Cremers-et-al-11}{{36}{}{{}}{{}}}
-\bibcite{Kulis12_ICML}{{37}{}{{}}{{}}}
-\bibcite{Kumar10}{{38}{}{{}}{{}}}
-\bibcite{Kumar08}{{39}{}{{}}{{}}}
-\bibcite{Kumar05a}{{40}{}{{}}{{}}}
-\bibcite{kundu2014}{{41}{}{{}}{{}}}
-\bibcite{valenteTS12}{{42}{}{{}}{{}}}
-\bibcite{lacoin2011zero}{{43}{}{{}}{{}}}
-\bibcite{lafarge2010}{{44}{}{{}}{{}}}
-\bibcite{vezhneva:2012tb}{{45}{}{{}}{{}}}
-\bibcite{Lempitsky11}{{46}{}{{}}{{}}}
-\bibcite{lezama11}{{47}{}{{}}{{}}}
-\bibcite{fei-fei}{{48}{}{{}}{{}}}
-\bibcite{liberzon2012invertibility}{{49}{}{{}}{{}}}
-\bibcite{Lin10_NIPS}{{50}{}{{}}{{}}}
-\bibcite{kearnsMN99}{{51}{}{{}}{{}}}
-\bibcite{Martnez:2004dz}{{52}{}{{}}{{}}}
-\bibcite{mourikisR07}{{53}{}{{}}{{}}}
-\bibcite{Silberman:ECCV12}{{54}{}{{}}{{}}}
-\bibcite{davison}{{55}{}{{}}{{}}}
-\bibcite{Newcombe2011a}{{56}{}{{}}{{}}}
-\bibcite{nieuwenhuis-et-al-ijcv12}{{57}{}{{}}{{}}}
-\bibcite{OB14b}{{58}{}{{}}{{}}}
-\bibcite{krauseG07}{{59}{}{{}}{{}}}
-\bibcite{dearden99}{{60}{}{{}}{{}}}
-\bibcite{royCB04}{{61}{}{{}}{{}}}
-\bibcite{Reid:2010ca}{{62}{}{{}}{{}}}
-\bibcite{ren2012rgbd}{{63}{}{{}}{{}}}
-\bibcite{grabowskiKC03}{{64}{}{{}}{{}}}
-\bibcite{Russell06}{{65}{}{{}}{{}}}
-\bibcite{slampp2013}{{66}{}{{}}{{}}}
-\bibcite{Schoenemann-Cremers-pami10}{{67}{}{{}}{{}}}
-\bibcite{Cremers-12}{{68}{}{{}}{{}}}
-\bibcite{sengupta2013}{{69}{}{{}}{{}}}
-\bibcite{RobFergus:2012vh}{{70}{}{{}}{{}}}
-\bibcite{SimD04}{{71}{}{{}}{{}}}
-\bibcite{soatto97}{{72}{}{{}}{{}}}
-\bibcite{stucklerBB12}{{73}{}{{}}{{}}}
-\bibcite{sturm12iros}{{74}{}{{}}{{}}}
-\bibcite{Teh10_EML}{{75}{}{{}}{{}}}
-\bibcite{ulen-strandmark-etal-itmi-12}{{76}{}{{}}{{}}}
-\bibcite{valenteTS13}{{77}{}{{}}{{}}}
-\bibcite{AlexanderVezhnevets:2012tw}{{78}{}{{}}{{}}}
-\bibcite{wangA94}{{79}{}{{}}{{}}}
-\bibcite{cremers}{{80}{}{{}}{{}}}
-\bibcite{pock}{{81}{}{{}}{{}}}
-\bibcite{whaiteF97}{{82}{}{{}}{{}}}
-\bibcite{xiao2013sun3d}{{83}{}{{}}{{}}}
-\bibcite{yamauchi97}{{84}{}{{}}{{}}}
-\bibcite{ics_nips11}{{85}{}{{}}{{}}}
-\bibcite{Yu03_ICCV}{{86}{}{{}}{{}}}
-\bibcite{yuG00}{{87}{}{{}}{{}}}
-\bibcite{yuWY96}{{88}{}{{}}{{}}}
-\bibcite{Zach2008}{{89}{}{{}}{{}}}
-\bibcite{Zach2007}{{90}{}{{}}{{}}}
-\bibcite{Zha01_NIPS}{{91}{}{{}}{{}}}
-\bibcite{GuofengZhang:jma}{{92}{}{{}}{{}}}
-\bibcite{GuofengZhang:jmb}{{93}{}{{}}{{}}}
-\bibcite{zhangJB11}{{94}{}{{}}{{}}}
-\bibcite{GuofengZhang:jm}{{95}{}{{}}{{}}}
-\bibcite{zheng2013beyond}{{96}{}{{}}{{}}}
+\bibstyle{plain}
+\bibdata{Exploration/exploration.bib,Exploration/text.bib,Observability/self.bib,Observability/filter.bib,Observability/total2.bib,SolidObjects/cvpr2015_solobj/bib/solidObjDet.bib,SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib,SolidObjects/cvpr2015_solobj/bib/taylorARS12.bib,SolidObjects/cvpr2015_solobj/bib/ayvaciS13.bib,SolidObjects/cvpr2015_solobj/bib/ayvaciS11mdl.bib,SolidObjects/cvpr2015_solobj/bib/trevor.bib,MinRep/minrep.bib}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Discussion}{100}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces \emph  {} {Red} bars pertain to Alberto and Sim\~ao's method, {blue} bars pertain to the bit-at-a time method, {green} bars pertain to the greedy clique completion method, and {black} bars pertain to an exhaustive search for a minimal reduction. }}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Poisson Trees Reduced vs.\ Orig.\ Size}}}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Patho.\ Trees Reduced vs.\ Orig.\ Size}}}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Poisson Trees Reduced vs.\ Min.\ Size}}}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Patho.\ Trees Reduced vs.\ Min.\ Size}}}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Algo.\ Runtimes on Poison Trees}}}{101}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Algo.\ Runtimes on Patho.\ Trees}}}{101}}
+\bibcite{4813796}{{1}{}{{}}{{}}}
+\bibcite{algoet94}{{2}{}{{}}{{}}}
+\bibcite{anand2012contextually}{{3}{}{{}}{{}}}
+\bibcite{cassandraKL94}{{4}{}{{}}{{}}}
+\bibcite{arbelF01}{{5}{}{{}}{{}}}
+\bibcite{atanasovSLKPD13}{{6}{}{{}}{{}}}
+\bibcite{AZCXT11}{{7}{}{{}}{{}}}
+\bibcite{ayvaciS12PAMI}{{8}{}{{}}{{}}}
+\bibcite{basile1969observability}{{9}{}{{}}{{}}}
+\bibcite{bezzaoucha2011unknown}{{10}{}{{}}{{}}}
+\bibcite{bleyerRR12}{{11}{}{{}}{{}}}
+\bibcite{burnsB03}{{12}{}{{}}{{}}}
+\bibcite{Campbell13_NIPS}{{13}{}{{}}{{}}}
+\bibcite{carreira_eccv12}{{14}{}{{}}{{}}}
+\bibcite{Chen:2009:ABF}{{15}{}{{}}{{}}}
+\bibcite{Collins1996}{{16}{}{{}}{{}}}
+\bibcite{connolly85}{{17}{}{{}}{{}}}
+\bibcite{denzlerB02}{{18}{}{{}}{{}}}
+\bibcite{Dhillon07_TPAMI}{{19}{}{{}}{{}}}
+\bibcite{dimassi2010robust}{{20}{}{{}}{{}}}
+\bibcite{WeiFeng:cw}{{21}{}{{}}{{}}}
+\bibcite{VittorioFerrari:2006uf}{{22}{}{{}}{{}}}
+\bibcite{hollinger12}{{23}{}{{}}{{}}}
+\bibcite{geyer91}{{24}{}{{}}{{}}}
+\bibcite{goren2007state}{{25}{}{{}}{{}}}
+\bibcite{Graber2011}{{26}{}{{}}{{}}}
+\bibcite{grasselli1965method}{{27}{}{{}}{{}}}
+\bibcite{haene2013}{{28}{}{{}}{{}}}
+\bibcite{hamano1983unknown}{{29}{}{{}}{{}}}
+\bibcite{hammouri2010unknown}{{30}{}{{}}{{}}}
+\bibcite{hauskrecht00}{{31}{}{{}}{{}}}
+\bibcite{hopcroft1971n}{{32}{}{{}}{{}}}
+\bibcite{baoS12}{{33}{}{{}}{{}}}
+\bibcite{jonesS09}{{34}{}{{}}{{}}}
+\bibcite{jonesS07}{{35}{}{{}}{{}}}
+\bibcite{Kalogerakis:2010:labelMeshes}{{36}{}{{}}{{}}}
+\bibcite{karp72}{{37}{}{{}}{{}}}
+\bibcite{kellyS09}{{38}{}{{}}{{}}}
+\bibcite{khler2013efficient}{{39}{}{{}}{{}}}
+\bibcite{Klein2007}{{40}{}{{}}{{}}}
+\bibcite{Cremers-et-al-11}{{41}{}{{}}{{}}}
+\bibcite{Kulis12_ICML}{{42}{}{{}}{{}}}
+\bibcite{Kumar10}{{43}{}{{}}{{}}}
+\bibcite{Kumar08}{{44}{}{{}}{{}}}
+\bibcite{Kumar05a}{{45}{}{{}}{{}}}
+\bibcite{kundu2014}{{46}{}{{}}{{}}}
+\bibcite{valenteTS12}{{47}{}{{}}{{}}}
+\bibcite{lacoin2011zero}{{48}{}{{}}{{}}}
+\bibcite{lafarge2010}{{49}{}{{}}{{}}}
+\bibcite{vezhneva:2012tb}{{50}{}{{}}{{}}}
+\bibcite{Lempitsky11}{{51}{}{{}}{{}}}
+\bibcite{lezama11}{{52}{}{{}}{{}}}
+\bibcite{fei-fei}{{53}{}{{}}{{}}}
+\bibcite{liberzon2012invertibility}{{54}{}{{}}{{}}}
+\bibcite{Lin10_NIPS}{{55}{}{{}}{{}}}
+\bibcite{kearnsMN99}{{56}{}{{}}{{}}}
+\bibcite{Martnez:2004dz}{{57}{}{{}}{{}}}
+\bibcite{mourikisR07}{{58}{}{{}}{{}}}
+\bibcite{Silberman:ECCV12}{{59}{}{{}}{{}}}
+\bibcite{davison}{{60}{}{{}}{{}}}
+\bibcite{Newcombe2011a}{{61}{}{{}}{{}}}
+\bibcite{nieuwenhuis-et-al-ijcv12}{{62}{}{{}}{{}}}
+\bibcite{OB14b}{{63}{}{{}}{{}}}
+\bibcite{krauseG07}{{64}{}{{}}{{}}}
+\bibcite{Pfleeger:1973:SRI:1311965.1312829}{{65}{}{{}}{{}}}
+\bibcite{dearden99}{{66}{}{{}}{{}}}
+\bibcite{royCB04}{{67}{}{{}}{{}}}
+\bibcite{Reid:2010ca}{{68}{}{{}}{{}}}
+\bibcite{ren2012rgbd}{{69}{}{{}}{{}}}
+\bibcite{grabowskiKC03}{{70}{}{{}}{{}}}
+\bibcite{Russell06}{{71}{}{{}}{{}}}
+\bibcite{slampp2013}{{72}{}{{}}{{}}}
+\bibcite{Schoenemann-Cremers-pami10}{{73}{}{{}}{{}}}
+\bibcite{Cremers-12}{{74}{}{{}}{{}}}
+\bibcite{sengupta2013}{{75}{}{{}}{{}}}
+\bibcite{RobFergus:2012vh}{{76}{}{{}}{{}}}
+\bibcite{SimD04}{{77}{}{{}}{{}}}
+\bibcite{soatto97}{{78}{}{{}}{{}}}
+\bibcite{stucklerBB12}{{79}{}{{}}{{}}}
+\bibcite{sturm12iros}{{80}{}{{}}{{}}}
+\bibcite{Teh10_EML}{{81}{}{{}}{{}}}
+\bibcite{ulen-strandmark-etal-itmi-12}{{82}{}{{}}{{}}}
+\bibcite{valenteTS13}{{83}{}{{}}{{}}}
+\bibcite{AlexanderVezhnevets:2012tw}{{84}{}{{}}{{}}}
+\bibcite{wangA94}{{85}{}{{}}{{}}}
+\bibcite{cremers}{{86}{}{{}}{{}}}
+\bibcite{pock}{{87}{}{{}}{{}}}
+\bibcite{whaiteF97}{{88}{}{{}}{{}}}
+\bibcite{xiao2013sun3d}{{89}{}{{}}{{}}}
+\bibcite{yamauchi97}{{90}{}{{}}{{}}}
+\bibcite{ics_nips11}{{91}{}{{}}{{}}}
+\bibcite{Yu03_ICCV}{{92}{}{{}}{{}}}
+\bibcite{yuG00}{{93}{}{{}}{{}}}
+\bibcite{yuWY96}{{94}{}{{}}{{}}}
+\bibcite{Zach2008}{{95}{}{{}}{{}}}
+\bibcite{Zach2007}{{96}{}{{}}{{}}}
+\bibcite{Zha01_NIPS}{{97}{}{{}}{{}}}
+\bibcite{GuofengZhang:jma}{{98}{}{{}}{{}}}
+\bibcite{GuofengZhang:jmb}{{99}{}{{}}{{}}}
+\bibcite{zhangJB11}{{100}{}{{}}{{}}}
+\bibcite{GuofengZhang:jm}{{101}{}{{}}{{}}}
+\bibcite{zheng2013beyond}{{102}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

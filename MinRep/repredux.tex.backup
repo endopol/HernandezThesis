@@ -3,10 +3,49 @@
 \appendtographicspath{{media/}}
 
 \section{Introduction}
-
-The work described here is the result of a collaboration of Andrea Censi, who 
+We are interested in obtaining agents that perform optimally on a task involving
+uncertainty while being as “simple” as possible, as measured by the size of their
+internal “representation”. While this is a problem relevant in many fields, our
+motivation comes from the fields of robotics and computer vision. Embodied
+agents have sensors providing very high-dimensional data; the world’s state is
+similarly high dimensional. Representing the agent’s belief about the world is
+complicated enough, and often inference is intractable. However, it has been
+observed that, for certain tasks, it is not necessary to represent and plan using the
+entire belief.
+Therefore, it is interesting to understand whether it is possible to solve a
+planning problem using a smaller representation than the entire belief. We will
+show that it is indeed possible and we will provide a constructive algorithm to
+obtain “representation-minimal” agents.
+\begin{figure}
+\includegraphics[height=0.7in]{agent}\qquad
+\includegraphics[height=0.7in]{reduced_agent}
+\caption{\emph{Representation Reduction} Canonical belief spaces can become a serious informational bottleneck
+between inference and planning modules.  
+An agent's understanding of its environment need not be any richer than necessary
+to support the task at hand.}
+\end{figure}
 \subsection{Previous Work}
+The topic of reduction of logical functions has been extensively studied.
+The formalism of finite state machines was developed in the 1950s and 60s,
+and by 1971, Hopcroft \cite{hopcroft1971n} published an $(n\log n)$-time algorithm for 
+reducing completely-specified FSMs. 
+Incompletely-Specified FSMs were studied in turn, and various heuristics were 
+developed to quickly approximate minimum\footnote{Here, we distinguish ``minimal'' from ``minimum'' reductions.  
+A minimal reduction is one that cannot be further reduced by combining any of its states, whereas
+a minimum reduction is a minimal reduction with the fewest possible states} 
+ reductions. \cite{Pfleeger:1973:SRI:1311965.1312829,grasselli1965method,goren2007state}.
+ Representation reduction in artificial intelligence has been dealt with in various guises:
+ Dimensionality reduction, belief space compression etc.\ -- most heuristics can be considered as
+ implicit hard-coded representation reductions.
+\subsection{Contributions}
+This chapter re-casts problem of representation reduction in terms of well-studied computational constructs,
+and finds absolute minimum reductions in the case of discrete time, discrete input and output.
+It evaluates three algorithms for approximating minimum reductions, and clarifies their strengths and weaknesses.
+This work is the result of a collaboration of Andrea Censi, 
+who introduced the formalism of representation reduction in the context of POMDP solvers
+and proposed the bit-at-a-time algorithm
 \section{Formalization}
+\iffalse
 \begin{definition}[Finite State Machine]
  A finite state machine is a tuple
  $$\ang{\Sigma, \Gamma, S, S_0, \delta, \omega},$$
@@ -21,14 +60,23 @@ where $\Sigma$ and $\Gamma$ are finite input and ouput alphabets, $S$ is a finit
  $\delta:S\times\Sigma\to S\cup\{\phi\}$ is a state-transition function, and $\omega:S\times\Sigma\to\Gamma\cup\{\epsilon\}$ is an output function.
 The extra symbols $\phi\notin S$ and $\epsilon\notin\Gamma$ denote ``unspecified'' outputs, 
 whose associated input and state are not expected to occur.
-\end{definition}
+s\end{definition}
 \begin{definition}[Policy]
  A decision policy is a tuple
- $\ang{\C,\U,T,\Y}$, where $\U$ is a set of actions, $\Y$ is a set of observations, $\C$ is the set of finite sequences in $\Y$, and
- and $T:(\C\times\Y)\to \U\cup\{\epsilon\}$ is a ``decision table'', assigning an action to each possible observation, for each ``context'' $c\in\C$ 
- .  Again $\epsilon$
+ $\ang{\C,\U,T,\Y}$, where $\U$ is a set of actions, $\Y$ is a set of observations, $\C$ is a set of ``contexts'', (usually taken as the set of finite sequences in $\Y$), and
+ and $T:(\C\times\Y)\to \U\cup\{\epsilon\}$ is a ``decision table'', assigning an action to each possible observation, for each context $c\in\C$.  
+ Again $\epsilon$ is assigned to unexpected combinations of observation and context.
 \end{definition}
-
+\begin{definition}[Obedience]
+Given the decision policy $P = \ang{\U, T : \operatorname{Sequences}(\Y)\to\U\cup\{\epsilon\}}$, we say
+that an ISFSM $\ang{\Sigma, \Gamma, S, s_0, \delta, \omega}$ obeys the policy $P$ if for every finite
+sequence $y_1, \ldots, y_n \in \Y$, there exists a sequence $s_0, \ldots, s_{n−1} \subs S$ such that
+$s_i = \delta(s_{i−1} , y_i)$ for all $i = 1, \ldots, n$
+and
+$T(y_1, \ldots, y_n ) = \omega(s_{n−1} , y_n$
+or
+$T (y_1 , ... , y_n ) = \epsilon$.
+\end{definition}
 
 
 \begin{example}[Equivalent Decision Tables] \label{ex:complete}
@@ -100,6 +148,7 @@ $(2,2)$&$\mapsto A$
 \end{figure}
 \end{example}
 Instead, we propose an ``incompletely-determined'' formalization:
+\fi
 \begin{definition}[Policies]
 Given a set $\Y$ of observations, recursively construct
 \begin{equation}
@@ -202,13 +251,22 @@ $(2,1)$&$\mapsto 2$\\
 Given a decision policy (or an ISFSM) how do we find an obedient (or
 equivalent) ISFSM with the smallest possible state set?
 
-for completely-specified FSM, this is 
-\section{Representation Reduction Strategies}
+for completely-specified FSM, this can be done in $n\log n$ time
+by Hopcroft's algorithm (Alg.\ \ref{algo: Hopcroft}).
 
 
 To find a minimum representation of a given policy,
 we first compute a graph of reducibility relations, 
 then compute a minimal clique-covering.
+
+Cliques on the equivalence graph identify sets of states that can be
+collapsed into a single state. The minimal clique-covering, that is the
+smallest collection of disjoint cliques that covers the equivalence
+graph, correponds to a minimal reduction of the FSM.
+
+\section{Representation Reduction Strategies}
+
+
 \setcounter{subfigure}{0}
 \begin{figure}[ht]
 \centering
@@ -266,7 +324,8 @@ Two contexts $c_1,c_2\in\C$ are reducible iff
 
 This informs the following algorithm
 \begin{algorithm}                      % enter the algorithm environment
-\caption{Compute Reducibility Relations}          % give the algorithm a caption
+\label{algo: Hopcroft}
+\caption{(Hopcroft) Compute Reducibility Relations}          % give the algorithm a caption
 \label{alg1}                           % and a label for \ref{} commands later in the document
 \begin{algorithmic}                    % enter the algorithmic environment
   \REQUIRE A representation $\ang{\C,\R,\U,\S,\T,\Y}$
@@ -294,25 +353,26 @@ This informs the following algorithm
 \end{algorithm}
 
 \subsection{Bit-at-a-Time}
-
-Proposed by Andrea Censi, MIT-LIDS: Greedily separate ambiguous contexts along decision tree.
+The Bit-at-a-Time reduction, proposed by Andrea Censi, generates a set of states one at a time,
+separating ambiguous contexts recursively.  An ambiguous context is an (input, state) pair for
+which more than one output is defined.  Ambiguities which arise in shorter sequences are separated first.
 \begin{figure}
 \centering
 \subfigure[Decision Tree]{\includegraphics[height=2in]{cdiag1}}
 \subfigure[Partitioned Tree]{\includegraphics[height=2in]{cdiag2}}
 \subfigure[Reduced FSM]{\includegraphics[width=1in]{cdiag3}}
+\caption{\emph{Censi's Bit-at-a-time Algorithm}}
 \end{figure}
  
 \subsection{Greedy Covering}
 
-Now, although reducibility is not an equivalence relation, 
+Although reducibility is not an equivalence relation, 
 any reduction $\phi:\S\to\S\1$ induces an equivalence relation,
 partitioning $\S$ into cliques of mutually-reducible states, i.e.
 \begin{equation}
 \S = \bigsqcup_{s\1\in\S\1}\phi\inv(s\1),\qtx{where}\phi(s_1)=\phi(s_2)\implies A(s_1,s_2)
 \end{equation}
 Thus, a minimum 
-\footnote{Here, we distinguish ``minimal'' from ``minimum'' reductions.  A minimal reduction is one that cannot be further reduced by combining any of its states} 
 reduction
 induces a minimum clique partition of the
 reducible states of a representation.
@@ -348,28 +408,6 @@ We propose the following, greedy, approximate algorithm
   \ENDWHILE
 \end{algorithmic}
 \end{algorithm}
-Although we have no proof that this algorithm produces minimal representations
-of a given policy, it is not inconceivable that this or another greedy policy could work.
-In general, the Minimal Clique Covering problem is NP-Complete, 
-but the tree structure of the decision policy is an a constraint that may simplify the problem.
-
-\subsection{Alberto and Sim\~ao}
-
-\subsubsection{Maximal Anticlique}
-
-\subsubsection{Limitations}
-\begin{figure}
-\subfigure[Bad Ordering]{
-\includegraphics{bad_greedy.pdf}}
-\subfigure[Good Ordering]{
-\includegraphics{good_greedy.pdf}}
-\caption{{}
-In 
-}
-\end{figure}
-
-
-\subsection{Exhaustive Search}
 In order find the absolute minimum representation of a
 given policy, it suffices to run the greedy algorithm on all
 possible orderings of its states: 
@@ -383,11 +421,48 @@ feed states to the greedy algorithm in the order in which they are written.
 %i.e. add from the list $s_{c_{11}}, s_{c_{12}}, \ldots, s_{c_{1N_1}}, s_{c_{21}},\ldots$ until
 Failure to add states to a running clique will occur only once per clique in the minimal covering (exactly $K$ times)
 \footnote{If more than $K$ times, then some running clique },
-so the greedy algorithm will produce a minimum covering.
+so the greedy algorithm will produce a minimum covering.  Of course, 
+exhaustively checking every ordering will end up taking exponential time.
+In fact, it has been shown that the minimum clique cover problem is NP-hard \cite{karp72}.
+\subsection{Maximal Anticlique}
+Alberto and Sim\~ao \cite{4813796} propose a heuristic to 
+increase the likelihood that a greedy algorithm produces a minimum clique covering --
+First, a maximum anticlique is found in the compatibility graph (This is also an NP-hard problem \cite{karp72},
+but the size of the maximum anticlique generally grows more slowly than the graph itself).
+
+\begin{figure}
+\setcounter{subfigure}{0}
+\centering
+\subfigure[Bad Ordering]{
+\includegraphics[width=4in]{bad_greedy.pdf}}
+\subfigure[Good Ordering]{
+\includegraphics[width=4in]{good_greedy.pdf}}
+\caption{\emph{Greedy Algorithm on Pathological Trees}
+Here we illustrate the dependence of greedy algorithms
+on the order of their inputs.
+In the first set of figures (a), we proceed randomly,
+greedily adding random states to a running clique until none can be added
+(no two states sharing an edge in the distinction graph can be part of the same clique).
+This results in one more clique than is necessary - 
+proceeding counterclockwise, we cover the set with only two cliques.
+Alberto and Sim\~ao's
+maximum anticlique algorithm
+fares no better, as the maximal anticlique has size 2.
+}
+\end{figure}
 
 \subsection{Comparisons}
+Two types of random FSMs were generated to test the correctness and numerical efficiency of the 
+algorithms described above.
 \subsubsection{Poisson Random Tree}
-
+A Poisson random tree is an decision policy generated by recursively adding
+      $X\sim\operatorname{Poisson(\lambda)}$ children to each new node of 
+      an existing policy.
+      We conditioned this result on the outcome that the  process not terminate before the tree 
+      reaches depth $H$ (contains a sequence of length $H$ or greater).
+      These decision policies are well-studied in decision theory, as they model birth/death processes where
+      individuals continuously produce
+      offspring at a rate of $\lambda$ per lifetime.
 \begin{figure}
 \centering
 \subfigure[Poisson Tree Growth Trend]{
@@ -395,28 +470,20 @@ so the greedy algorithm will produce a minimum covering.
 }
 \subfigure[Tree, Depth 10]{
 \includegraphics[height=1.8in]{big_tree_left.pdf}}
-\caption{\emph{Poisson Random Tree}
-Generated by recursively adding
-      $X\sim\operatorname{Poisson(\lambda)}$   children to each new node.  
-      Result is conditioned on process not terminating before depth $H$.
-      Models a birth/death process where
-      individuals continuously produce
-      offspring at a rate of $\lambda$ per lifetime.      
-      }
+\caption{\emph{Poisson Random Tree}}
 \end{figure}
 
 \subsubsection{Pathological Tree}
-
-we can 
-
+The ``pathological'' tree is a policy of depth 2 with $6n+1$ contexts.
+was designed to frustrate the algorithm of Alberto and Sim\~ao.
+Each of its states at depth 1 is incompatible with exactly two others.  
+The resulting distinction graph consists of disjoint rings. 
+The order in which states are added to cliques is critical.  
+Half of all orderings result in a three-state FSM, whereas the minimum number of states is two.
 \begin{figure}
 \centering
 \includegraphics[width=4in]{big_patho_tree.pdf} 
-\caption{\emph{Pathological Tree} 
-This tree was designed to frustrate the algorithm of Alberto and Sim\~ao.
-Each of its states at depth 1 is incompatible with exactly two others.  
-The resulting distinction graph consists of disjoint rings.
-}
+\caption{\emph{Pathological Tree} }
 \end{figure}
 
 
@@ -468,6 +535,3 @@ and
 {black} bars pertain to an exhaustive search for a minimal reduction.
 }
 \end{figure}
-
-
-\bibliographystyle{plain}

@@ -1,4 +1,11 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
+
+\bibitem{4813796}
+A.~Alberto and A.~Simao.
+\newblock Minimization of incompletely specified finite state machines based on
+  distinction graphs.
+\newblock In {\em Test Workshop, 2009. LATW '09. 10th Latin American}, pages
+  1--6, March 2009.
 
 \bibitem{algoet94}
 P.\ Algoet.
@@ -147,11 +154,22 @@ C.J.\ Geyer.
 \newblock pages 156--163, 1991.
 \newblock \emph{Proc. 23rd Symp. Interface. Computing Science and Statistics}.
 
+\bibitem{goren2007state}
+Sezer G{\"o}ren and F~Joel Ferguson.
+\newblock On state reduction of incompletely specified finite state machines.
+\newblock {\em Computers \& Electrical Engineering}, 33(1):58--69, 2007.
+
 \bibitem{Graber2011}
 G.~Graber, T.~Pock, and H.~Bischof.
 \newblock Online 3d reconstruction using convex optimization.
 \newblock In {\em 1st Workshop on Live Dense Reconstruction From Moving
   Cameras, ICCV 2011}, 2011.
+
+\bibitem{grasselli1965method}
+Antonio Grasselli and Fabrizio Luccio.
+\newblock A method for minimizing the number of internal states in incompletely
+  specified sequential networks.
+\newblock {\em Electronic Computers, IEEE Transactions on}, (3):350--359, 1965.
 
 \bibitem{haene2013}
 C.~Haene, C.~Zach, A.~Cohen, R.~Angst, and M.~Pollefeys.
@@ -178,6 +196,11 @@ M.\ Hauskrecht.
 \newblock pages 33--94, 2000.
 \newblock \emph{Journal of Artificial Intelligence Research}, vol. 13, pp.2000.
 
+\bibitem{hopcroft1971n}
+John Hopcroft.
+\newblock An n log n algorithm for minimizing states in a finite automaton.
+\newblock Technical report, DTIC Document, 1971.
+
 \bibitem{baoS12}
 Hanqing Jiang, Haomin Liu, Ping Tan, Guofeng Zhang, and Hujun Bao.
 \newblock 3d reconstruction of dynamic scenes with multiple handheld cameras.
@@ -198,6 +221,13 @@ E.~S. Jones, A.~Vedaldi, and S.~Soatto.
 Evangelos Kalogerakis, Aaron Hertzmann, and Karan Singh.
 \newblock Learning 3d mesh segmentation and labeling.
 \newblock {\em ACM Transactions on Graphics (TOG)}, 29(4):102, 2010.
+
+\bibitem{karp72}
+RichardM. Karp.
+\newblock Reducibility among combinatorial problems.
+\newblock In RaymondE. Miller, JamesW. Thatcher, and JeanD. Bohlinger, editors,
+  {\em Complexity of Computer Computations}, The IBM Research Symposia Series,
+  pages 85--103. Springer US, 1972.
 
 \bibitem{kellyS09}
 J.~Kelly and G.~Sukhatme.
@@ -366,6 +396,11 @@ Near optimal Observation Selection~using Submodular~Functions.
 \newblock A.\ krause and c.\ guestrin.
 \newblock 2007.
 \newblock \emph{American Association for Artificial Intelligence (AAAI)}, 2007.
+
+\bibitem{Pfleeger:1973:SRI:1311965.1312829}
+C.~P. Pfleeger.
+\newblock State reduction in incompletely specified finite-state machines.
+\newblock {\em IEEE Trans. Comput.}, 22(12):1099--1102, December 1973.
 
 \bibitem{dearden99}
 N.\~Friedman R.\~Dearden and D.\ Andre.

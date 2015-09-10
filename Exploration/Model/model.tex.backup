@@ -44,7 +44,7 @@ the probability that that point is covered by an obstacle.
 (b) In the second case, partitions (black line segments),
 constrained to grid lines (dotted lines)
 divide up a room.  Seeing any point of a grid segment
-reveals the disposition of any other grid segment.
+reveals the disposition of any other point on that grid segment.
 }
 \end{figure}
 
@@ -62,7 +62,7 @@ In this chapter we consider the problem where the
 variable of interest is the geometry and topology of a
 two-dimensional scene (e.g. the map of a building) 
 represented by an indicator function defined on a domain
-$\Omega \subs \RR^2$ , supported on a closed subset
+$\Omega \subs \RR^2$, supported on a closed subset
 $\O \subs \Omega$ that describes unknown ``obstacles'' or ``objects.''
 The explorer follows a continuous path $x(t)$
 in the space $\Omega\andn\O$.
@@ -577,10 +577,14 @@ In this case, we have 30 angular divisions and 200 radial divisions within a max
 \subfigure[r=0.04]{
 \includegraphics[width=.9in]{W04}}
 \subfigure[r=0.08]{
+\includegraphics[width=.9in]{W06}}
+\subfigure[r=0.06]{
 \includegraphics[width=.9in]{W08}}
 \caption{\emph{3D Weight Profiles for Various $r$}
 The counting technique described in \ref{section: indcells} is applied 
-to 3D Poisson-Disc Voronoi Scenes, drawing from a spherical sampling pattern (a).
+to 3D Poisson-Disc Voronoi Scenes, drawing from a spherical sampling pattern (a)
+with 30 azimuthal, 200 radial, and 11 elevation divisions.  Again, radial symmetry around the 
+vertical axis allows us to ignore azimuthal index.
 }
 \end{figure}
 
@@ -649,21 +653,21 @@ Exploration terminates when $E_t(x)$ falls below a certain threshold for all poi
 \begin{figure}
 \centering
  \begin{tabular}{ccc}
-\includegraphics[width=1.5in]{2D/scene_01}&
-\includegraphics[width=1.5in]{2D/marginal_01}&
-\includegraphics[width=1.5in]{2D/energy_01}\\
-\includegraphics[width=1.5in]{2D/scene_02}&
-\includegraphics[width=1.5in]{2D/marginal_02}&
-\includegraphics[width=1.5in]{2D/energy_01}\\
-\includegraphics[width=1.5in]{2D/scene_03}&
-\includegraphics[width=1.5in]{2D/marginal_03}&
-\includegraphics[width=1.5in]{2D/energy_03}\\
-\includegraphics[width=1.5in]{2D/scene_04}&
-\includegraphics[width=1.5in]{2D/marginal_04}&
-\includegraphics[width=1.5in]{2D/energy_04}\\
-\includegraphics[width=1.5in]{2D/scene_05}&
-\includegraphics[width=1.5in]{2D/marginal_05}&
-\includegraphics[width=1.5in]{2D/energy_05}\\
+\includegraphics[width=1.3in]{2D/scene_01}&
+\includegraphics[width=1.3in]{2D/marginal_01}&
+\includegraphics[width=1.3in]{2D/energy_01}\\
+\includegraphics[width=1.3in]{2D/scene_02}&
+\includegraphics[width=1.3in]{2D/marginal_02}&
+\includegraphics[width=1.3in]{2D/energy_01}\\
+\includegraphics[width=1.3in]{2D/scene_03}&
+\includegraphics[width=1.3in]{2D/marginal_03}&
+\includegraphics[width=1.3in]{2D/energy_03}\\
+\includegraphics[width=1.3in]{2D/scene_04}&
+\includegraphics[width=1.3in]{2D/marginal_04}&
+\includegraphics[width=1.3in]{2D/energy_04}\\
+\includegraphics[width=1.3in]{2D/scene_05}&
+\includegraphics[width=1.3in]{2D/marginal_05}&
+\includegraphics[width=1.3in]{2D/energy_05}\\
 \subfigure[Visibility]{
 \hphantom{\includegraphics[width=1.5in]{2D/scene_05}}}&
 \subfigure[Marginal Likelihood]{
@@ -671,7 +675,11 @@ Exploration terminates when $E_t(x)$ falls below a certain threshold for all poi
 \subfigure[Viewpoint Quality]{
 \hphantom{\includegraphics[width=1.5in]{2D/energy_05}}}\\
 \end{tabular}
-
+\caption{\emph{Exploration of a 2D Scene} 
+An explorer (red dot) attempts to efficiently map an unknown scene (a) 
+by greedily choosing informative viewpoints (c).  
+Observe that we are not merely uncovering area. Once the disposition of a site
+has been determined with high confidence (b), that site loses its informative value.}
 \end{figure}
 
 \begin{figure}
@@ -703,14 +711,15 @@ Exploration terminates when $E_t(x)$ falls below a certain threshold for all poi
 \subsection{Performance Bounds}
 
 These bounds depend on some conjectured properties of the Ising-model marginal visibility probabilities $p_t(x) = \PP_t[x\in\V]$.  
-Assume a fixed scaled-iteration-number $\mu := m/\text{scale}$, and sufficiently-small grid spacings in $G$:
+Assume a fixed scaled-iteration-number $\mu := m/\text{scale(m)}$, and sufficiently-small grid spacings in $G$:
 
 \begin{conj}[Bounded Curvature of $p_t$]
+\label{equi}
 For any threshold $\epsilon>0$, 
 there is a finite constant $K = K(\epsilon)$, independent of $\V_t$ and $\O_t$, such that
 (some suitable discrete analogue of) the boundary curvature of the level set $\{x:p_t(x) \leq 1-\epsilon\}$ is bounded above by $K$.
 \end{conj}
-The result in \cite{ising_curv}, that the zero-temperature Ising model acts (in the scaling limit) as a curve-shortening flow on the level curves of binary images,
+The result in \cite{lacoin2011zero}, that the zero-temperature Ising model acts (in the scaling limit) as a curve-shortening flow on the level curves of binary images,
 suggests that the iterative low-temperature simulations that generate our hypothetical scenes
 will produce predictably-rounded hypothetical obstacles.  In turn, it suggests that their pointwise average will have predictably-rounded level curves.
 
@@ -789,7 +798,8 @@ $x\in V^r(x_0)$.
 \subfigure[\mbox{Exploration Stats}, Ising Marginals]{
 \includegraphics[width=6in]{ising_cropped}
 }
-\caption{Exploration comparison with Valente et al.\label{fig:valente}}
+\caption{Exploration comparison with Valente et al.\label{fig:valente}
+}
 \end{figure*}
 
 Using the exploration testbed provided by the authors of \cite{valenteTS13}, 

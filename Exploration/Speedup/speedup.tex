@@ -51,45 +51,38 @@ Thus $B^k \sim \ber(2^{-2^k})$.
 Define
 \begin{equation}
  \bI^{t+1}_{ij} := \begin{cases}
-B(\bar H_{ij}^t) & \bar H_{ij}^t<0\\
-\neg B(\bar H_{ij}^t) & \bar H_{ij}^t>0\\
-B^0 & \bar H_{ij}^t=0
+B(\bar H_{ij}^t) & \bar H_{ij}^t<2\\
+\neg B(\bar H_{ij}^t) & \bar H_{ij}^t>2\\
+B^0 & \bar H_{ij}^t=2
 \end{cases},
 \end{equation}
 where
 \begin{gather}
 B(H) := \bigwedge_{k=1}^K((\neg C_k(H))\vee B^k),\\
-C_k(H) := \text{$k$-th bit of}\; \bar{\beta}(|H|-1).
+C_k(H) := \text{$k$-th bit of}\; \bar{\beta}|H-2|+1.
 \end{gather}
 Here $\bar\beta$ must be an integer. Observe that 
-$$\exp_2\bigl(-\sum_{k=1}^K 2^k\,C_k(H)\bigr) =  2^{-\beta (|H|-1)},$$
+$$\exp_2\bigl(-\sum_{k=1}^K 2^k\,C_k(H)\bigr) =  2^{-\bar\beta |H-2|-1},$$
 and thus
 \begin{equation}
 E(\bI^{t+1}_{ij}) = 
 \begin{cases}
-2^{-\beta (|H|-1)} & H_{ij}^t < 0\\
-1-2^{-\beta (|H|-1)} & H_{ij}^t > 0\\
-0.5 & H_{ij}^t = 0
+2^{-\bar\beta |H-2|-1} & H_{ij}^t < 2\\
+1-2^{-\bar\beta |H-2|-1} & H_{ij}^t > 2\\
+0.5 & H_{ij}^t = 2
 \end{cases}
 \end{equation}
 
-%\subsubsection{Quality of the estimate}
-%How good is the estimate? See Fig. \ref{fig: parcompare}.
-%$$P(I_{ij}^{t+1} = 1 | I_{ij}^t) = $$
-
 \begin{figure}
-\includegraphics[width=1.5in]{Parallel_Bits/isingup}
-\includegraphics[width=1.5in]{Parallel_Bits/bitup}
+\includegraphics[width=1.5in]{Parallel_Bits/isingup}\quad
+\includegraphics[width=1.5in]{Parallel_Bits/bitup}\quad
 \includegraphics[width=1.5in]{Parallel_Bits/parcompare}
 \caption{\emph{Comparison of Update Probabilities:} 
-Values of $\bar\beta$ are taken from 0 to 6.  $\beta$ is taken such that
-$\log(2)\bar\beta = \beta$.  Update probabilities for the Ising Model and
+Values of $\bar\beta$ are taken from 0 to 6.  
+Update probabilities for the Ising Model and
 the parallel bit estimate are computed on the continuum $[0,4]$, 
 although only integers $\{0, \ldots 4\}$ are used in practice.\label{fig: parcompare}}
 \end{figure}
-
-In a more practical sense, as the original ising model
-
 \subsubsection{Computing the counts $C_k$}
 
 The counting bits $C_k$ are computed as with a standard binary adder.  

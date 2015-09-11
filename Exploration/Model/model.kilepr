@@ -38,7 +38,7 @@ highlight=LaTeX
 line=0
 mode=LaTeX
 open=false
-order=-1
+order=1
 
 [item:model.kilepr]
 archive=true
@@ -52,10 +52,10 @@ order=-1
 
 [item:model.tex]
 archive=true
-column=31
+column=38
 encoding=UTF-8
 highlight=LaTeX
-line=775
+line=596
 mode=LaTeX
 open=true
 order=0
@@ -67,7 +67,7 @@ JumpList=
 ViMarks=.,10,0,[,10,0,],10,0
 
 [view-settings,view=0,item:model.tex]
-CursorColumn=31
-CursorLine=775
+CursorColumn=38
+CursorLine=596
 JumpList=
-ViMarks=.,579,31,[,579,31,],579,31
+ViMarks=.,908,42,[,908,29,],908,42

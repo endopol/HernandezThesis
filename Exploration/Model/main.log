@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.15)  10 SEP 2015 13:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.15)  11 SEP 2015 06:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1679,9 +1679,6 @@ Overfull \hbox (26.21498pt too wide) in paragraph at lines 853--876
 Package natbib Warning: Citation `lacoin2011zero' on page 16 undefined on input
  line 882.
 
-
-LaTeX Warning: Reference `conj: equi' on page 16 undefined on input line 910.
-
 [16] [17 <./2D/scene_01.png> <./2D/marginal_01.png (PNG copy)> <./2D/energy_01.
 png (PNG copy)> <./2D/scene_02.png> <./2D/marginal_02.png> <./2D/scene_03.png (
 PNG copy)> <./2D/marginal_03.png> <./2D/energy_03.png (PNG copy)> <./2D/scene_0
@@ -1693,86 +1690,69 @@ PNG copy)> <./view_03.png (PNG copy)> <./marginal_03.png (PNG copy)> <./energy_
 03.png (PNG copy)> <./view_04.png (PNG copy)> <./marginal_04.png (PNG copy)> <.
 /energy_04.png (PNG copy)> <./view_05.png (PNG copy)> <./marginal_05.png (PNG c
 opy)> <./energy_05.png (PNG copy)>]
-
-! Package amsmath Error: Multiple \label's: label 'conj: equi' will be lost.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.938 \end{align}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 <simple_stats.pdf, id=958, 532.99126pt x 117.43875pt>
 File: simple_stats.pdf Graphic file (type pdf)
  <use simple_stats.pdf>
-Package pdftex.def Info: simple_stats.pdf used on input line 961.
+Package pdftex.def Info: simple_stats.pdf used on input line 960.
 (pdftex.def)             Requested size: 433.62pt x 95.54596pt.
 
 <ising_cropped.pdf, id=959, 532.99126pt x 118.4425pt>
 File: ising_cropped.pdf Graphic file (type pdf)
  <use ising_cropped.pdf>
-Package pdftex.def Info: ising_cropped.pdf used on input line 964.
+Package pdftex.def Info: ising_cropped.pdf used on input line 963.
 (pdftex.def)             Requested size: 433.62pt x 96.3626pt.
 
-Overfull \hbox (95.28665pt too wide) in paragraph at lines 961--966
+Overfull \hbox (95.28665pt too wide) in paragraph at lines 960--965
  [][] 
  []
 
 
-Overfull \hbox (95.28665pt too wide) in paragraph at lines 961--966
+Overfull \hbox (95.28665pt too wide) in paragraph at lines 960--965
  [] 
  []
 
 
 Package natbib Warning: Citation `valenteTS13' on page 19 undefined on input li
-ne 969.
+ne 968.
 
 )
 
 Package natbib Warning: There were undefined citations.
 
-[19] [20 <./simple_stats.pdf> <./ising_cropped.pdf>] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[19] [20 <./simple_stats.pdf> <./ising_cropped.pdf>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14549 strings out of 495028
- 259841 string characters out of 6181497
- 308555 words of memory out of 5000000
- 17329 multiletter control sequences out of 15000+600000
+ 14548 strings out of 495028
+ 259829 string characters out of 6181497
+ 308554 words of memory out of 5000000
+ 17328 multiletter control sequences out of 15000+600000
  12370 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  65i,23n,92p,1181b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/josh/.texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qbkr.pfb><
-/usr/share/texmf/fonts/type1/public/tex-gyre/qbkri.pfb></usr/share/texmf/fonts/
-type1/public/tex-gyre/qzcmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-ro8a.pfb>
-Output written on main.pdf (20 pages, 4755201 bytes).
+ </home/josh
+/.texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qbkr.pfb></usr/share/tex
+mf/fonts/type1/public/tex-gyre/qbkri.pfb></usr/share/texmf/fonts/type1/public/t
+ex-gyre/qzcmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (20 pages, 4755184 bytes).
 PDF statistics:
  1168 PDF objects out of 1200 (max. 8388607)
  740 compressed objects within 8 object streams
